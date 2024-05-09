@@ -1,0 +1,1313 @@
+body,
+html {
+  font-family: "Inter", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.content {
+  background: url('img/bg1.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  z-index: 2000;
+}
+
+.pre-2 {
+  width: 100%;
+  /* 充滿容器 */
+  height: auto;
+  /* 保持原有比例 */
+  object-fit: cover;
+  /* 確保不失真 */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  /* 子元素垂直排列 */
+  justify-content: center;
+  /* 沿主軸（此處為垂直）居中對齊 */
+  align-items: center;
+  /* 沿交叉軸（此處為水平）居中對齊 */
+  text-align: center;
+  /* 確保文本也居中 */
+  width: 50%;
+}
+
+.text-wrapper-4 img {
+  width: 35em;
+  /* 設定圖片寬度與字體的em相同 */
+  height: auto;
+  /* 高度自動調整以保持圖片比例 */
+  display: block;
+  /* 使圖片區塊顯示，可以避免額外的空間 */
+  z-index: 10;
+}
+
+
+/* .flexcontainer{
+  padding: 0 300px;
+} */
+.text-wrapper-5 {
+  font-family: "Inter", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  font-weight: 550;
+  color: #2e3f38;
+  font-size: 1.55rem;
+  width: 100%;
+  /* 控制文本寬度 */
+  margin: 0.5em 0;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  background-color: #fff;
+  /* 白色背景 */
+  color: #000;
+  /* 黑色文字 */
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#explore-button {
+  font-family: "Inter", Helvetica;
+  background-color: #ffffff;
+  /* Change this to your desired button color */
+  color: rgb(78, 78, 78);
+  /* Change this to your desired text color */
+  font-size: 1.5em;
+  font-weight: 550;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#explore-button:hover {
+  background-color: #d2d2d2;
+  /* 鼠标悬停时保持背景透明 */
+}
+
+#explore-button:focus {
+  outline: none;
+  /* 确保点击时没有轮廓线 */
+}
+
+.pre {
+  width: auto;
+  height: 500px;
+  top: 10px;
+  left: 1050px;
+  position: fixed;
+  mix-blend-mode: lighten;
+}
+
+.pre-2 {
+  width: auto;
+  height: 500px;
+  top: 200px;
+  left: 100px;
+  position: fixed;
+  mix-blend-mode: lighten;
+  transform: scale(0.5);
+}
+
+
+.pre-comp {
+  width: 279px;
+  height: 286px;
+  top: 470px;
+  left: 451px;
+  position: fixed;
+  mix-blend-mode: lighten;
+}
+
+.new-content {
+  font-family: "Inter", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 8%;
+  /* banner下方 */
+  left: 0;
+  /* 从左侧开始 */
+  right: 0;
+  /* 拉伸到右侧 */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-in-out;
+  z-index: 10;
+  /* 确保在必要的层上 */
+}
+
+
+/* #canvas {
+  font-family: "Inter", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  text-align: center;
+  padding: 100px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+} */
+
+.input {
+  width: 50%;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 25px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #333;
+  outline: none;
+  background: rgba(245, 244, 244, 0.5) url('img/search-interface-symbol.png') no-repeat;
+  background-position: 20px center;
+  background-size: 20px 20px;
+  padding-left: 50px;
+  font-family: "Inter", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  /* margin-top: 50px; */
+  z-index: 2000;
+  /* margin-left: 50%; */
+}
+
+.input::placeholder {
+  color: #000;
+  /* Placeholder text color */
+  opacity: 0.7;
+  /* Slightly transparent */
+}
+
+.input:focus {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  /* More prominent shadow on focus */
+  background: #ffffff;
+  /* Solid white background on focus */
+}
+
+button {
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #fff;
+  /* 白色背景 */
+  color: #000;
+  /* 黑色文字 */
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 100;
+}
+
+#submitButton {
+  color: #4b4b4b;
+  background-color: rgb(219, 219, 219);
+  font-size: 1.4rem;
+  padding: 0px 20px;
+  /* height: 50px; */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 100;
+}
+
+#submitButton:hover {
+  background-color: #333333;
+  /* Darken button on hover */
+  color: #ffffff;
+  /* Change text color to white */
+}
+
+
+#submitButton:active {
+  background-color: #555555;
+  /* Even darker on click */
+}
+
+/*按鈕排列*/
+#buttonContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  /* 不允许按钮换行 */
+  overflow-x: hidden;
+  /* 隐藏水平滚动条 */
+  justify-content: center;
+  /* Centers buttons horizontally */
+  align-items: center;
+  z-index: 10;
+  /* 确保 z-index 高于其他元素 */
+  position: relative;
+  justify-content: flex-start;
+
+}
+
+#buttonContainer button {
+  background-color: #ffffff;
+  /* Button background color */
+  color: #333333;
+  /* Button text color */
+  border-radius: 20px;
+  padding: 5px 22px;
+  /* Adjust font size for better fit if necessary */
+  font-size: 24px;
+  /* Set a flexible basis with max content to avoid overflow */
+  font-weight: 500;
+  flex: 1 1 auto;
+  /* Set maximum width for each button */
+  max-width: calc(100%/4 - 10px);
+  /* assuming 4 buttons per row */
+  /* Adjust margin for spacing around the buttons */
+  margin: 5px;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  font-family: 'Inter', sans-serif;
+  /* Font family */
+  text-transform: uppercase;
+  /* Makes text uppercase */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth color transition */
+}
+
+#buttonContainer button:hover {
+  background-color: #333333;
+  /* Button background color on hover */
+  color: #ffffff;
+  /* Button text color on hover */
+}
+
+#buttonContainer button:active {
+  transform: scale(0.98);
+  /* Slightly scale down button when clicked */
+}
+
+#buttonContainer button:nth-child(4n) {
+  margin-right: 0;
+}
+
+.bridge {
+  position: relative;
+  padding: 0;
+  /* 确保这个元素是 position:relative; 来支持绝对定位的子元素 */
+}
+
+.intro-textbox {
+  /* This will take it out of the normal document flow */
+  z-index: 2000;
+  /* Lower z-index to keep it behind other content */
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  /* Semi-transparent white border */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 2px 32px;
+  /* Padding inside the box */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  /* Vertical translucent white gradient background */
+  backdrop-filter: blur(10px);
+  /* Blur effect for the background */
+  max-width: 800px;
+  /* Maximum width of the text box */
+  margin: 10px auto;
+  /* Center the box with margin */
+  color: #000000;
+  /* Text color */
+  font-family: 'Inter', sans-serif;
+  /* Font style */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+}
+
+.intro-textbox h2 {
+  margin: 0 0 10px 0;
+  /* Space below the title */
+  padding-left: 15px;
+  /* Space before the title text */
+  border-left: 5px solid #404345;
+  /* Blue vertical line before title */
+  color: #404345;
+  /* Blue text color for the title */
+  font-size: 18px;
+  /* Title font size */
+  text-align: left;
+  /* Aligns the title to the left */
+}
+
+.gradient-textbox hr {
+  border: 0;
+  height: 1px;
+  background-color: #404345;
+  /* Blue line color */
+  margin-top: 10px;
+  /* Space above the line */
+  margin-bottom: 10px;
+  /* Space below the line */
+}
+
+.intro-textbox p {
+  margin: 0;
+  /* No margin for the paragraph to control spacing tightly */
+  line-height: 1.6;
+  /* Line height for paragraph text */
+  font-size: 14px;
+  /* Paragraph font size */
+}
+
+
+/*按鈕樣式*/
+#ALL,
+#category1,
+#category2,
+#category3,
+#category4,
+#category5,
+#category6,
+#category7,
+#category8,
+#category9,
+#category10,
+#category11 {
+  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  font-weight: 700;
+  color: #4b4b4b;
+  font-size: 20px;
+  display: inline-flex;
+  /* 使用 inline-flex 以便在 Flexbox 布局中正确显示 */
+  justify-content: center;
+  /* 水平居中按钮内的文本 */
+  align-items: center;
+  /* 垂直居中按钮内的文本 */
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  background-color: transparent;
+  /* 设置背景颜色为透明 */
+  border: none;
+  /* 去除边框 */
+  cursor: pointer;
+  height: 29px;
+  /* 按钮高度 */
+  outline: none;
+  margin-bottom: 0;
+  /* 可以添加适当的底边距以分隔按钮 */
+  padding: 10px 20px;
+  /* 适当的填充，确保文本的空间 */
+  flex: 0 0 auto;
+  /* 添加此属性，防止按钮伸缩，保持固定宽度 */
+  width: calc(20% - 4px);
+  /* 根据容器宽度设置按钮宽度 */
+  margin-right: 2px;
+  /* 为按钮之间设置间距 */
+}
+
+/* 移除最后一个按钮的 margin-right */
+.bridge .rectangle .BUTTONcontainer button:last-child {
+  margin-right: 0;
+}
+
+/*頁面下方文字及按鈕*/
+.butguide {
+  font-size: 1.4rem;
+  opacity: 0;
+  width: auto;
+  /* Auto width based on content */
+  position: fixed;
+  /* Fixed position */
+  bottom: 20px;
+  /* Distance from bottom */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  /* Adjust horizontal position */
+  margin: 20px auto;
+  /* Centering in the available space */
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 2000;
+}
+
+.butguide:hover {
+  background-color: #b9b9b9;
+  /* Button background color on hover */
+  color: #000;
+}
+
+#canvasHolder {
+  z-index: 9;
+  /* 確保層級足夠高，不被其他元素覆蓋 */
+}
+
+/* 模态框样式 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(59, 59, 59, 0.7);
+  /* 调整颜色和透明度以创建白色透明遮罩 */
+}
+
+#tooltip {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  /* 使用 transform 来居中元素 */
+  display: flex;
+  /* 使用 flexbox 确保内容居中 */
+  flex-direction: column;
+  /* 子项垂直排列 */
+  align-items: center;
+  /* 子项水平居中 */
+  justify-content: center;
+  /* 子项垂直居中 */
+  /* background-color: rgba(240, 240, 240, 0.5); */
+  background-image: url(img/infobg1.jpg);
+  /* 白色背景 */
+  background-size: cover;
+  /* Ensure it covers the entire element */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  color: #333;
+  /* 深灰文字 */
+  padding: 8px;
+  /* 内边距 */
+  border-radius: 10px;
+  /* 边角圆滑 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 加強陰影以增加深度感 */
+  border: none;
+  /* 移除邊框 */
+  font-family: "Inter", sans-serif;
+  /* 字体 */
+  font-size: 15px;
+  /* 字号 */
+  position: absolute;
+  /* 绝对定位 */
+  max-width: 260px;
+  /* 最大宽度 */
+  z-index: 999;
+  /* 低於.content的z-index 2000 */
+  display: none;
+}
+
+#tooltip img {
+  max-width: 100%;
+  /* ensures image does not overflow the tooltip */
+  height: auto;
+  /* maintains aspect ratio */
+  border-radius: 8px;
+  /* optional, for rounded corners */
+}
+
+.tooltip-item {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  /* 提供陰影以產生立體效果 */
+  border: none;
+  /* 確保移除邊框 */
+  padding: 10px;
+  /* 内边距 */
+  text-align: center;
+  /* 文字居中 */
+  display: flex;
+  /* 使用 flex 布局 */
+  align-items: center;
+  /* 垂直居中 */
+  justify-content: center;
+  /* 水平居中 */
+  border-radius: 20px;
+  /* 边角圆滑 */
+  background-color: #ffffff;
+  white-space: pre-wrap;
+  flex-direction: column;
+  margin-bottom: 8px;
+  /* 添加下方間距 */
+  /* position: relative; */
+
+}
+
+.tooltip-item-usernum {
+  background-color: transparent;
+  box-shadow: none;
+  color: #5C5C5C;
+  font-weight: 550;
+  letter-spacing: 5px;
+
+}
+
+.tooltip-div {
+  background: linear-gradient(180deg, rgba(156.91, 202.31, 212.27, 0.66) 0%, rgba(156.91, 202.31, 212.27, 0) 100%);
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  font-weight: 900;
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: 2px;
+  top: -200%;
+}
+
+.tooltip-grid {
+  display: grid;
+  /* 使用 grid 布局 */
+  grid-template-columns: repeat(2, 1fr);
+  /* 两列，每列分配可用空间 */
+  grid-gap: 8px;
+  /* 格子间距 */
+  width: 100%;
+  /* 宽度100% */
+  margin-top: 8px;
+  /* 上外边距 */
+  margin-right: 10px;
+  /* adjust this value as needed for spacing */
+
+}
+
+.tooltip-grid>.tooltip-item {
+  padding: 8px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  /* Consistent spacing for all sides */
+}
+
+.tooltip-grid>.tooltip-item:first-child {
+  grid-column: 1 / 2;
+  /* First item in the first column */
+}
+
+.tooltip-grid>.tooltip-item:nth-child(2) {
+  grid-column: 2 / 3;
+  /* Second item in the second column */
+}
+
+.tooltip-grid>.tooltip-item:last-child {
+  grid-column: 1 / -1;
+  /* Last item spans across all columns */
+}
+
+.tooltip-label {
+  /* position: absolute;
+  top: 5px;
+  left: 5px; */
+  align-self: flex-start;
+  /* 將 .tooltip-label 維持在上方 */
+  background-color: #969696;
+  /* 設置底圖背景色 */
+  border-radius: 18px;
+  /* 長圓角的設置 */
+  padding: 3px 10px;
+  /* 適當的內邊距 */
+  display: inline-block;
+  /* 讓標籤保持在行內 */
+  margin-right: 16px;
+  /* 標籤與數據之間的間隙 */
+  color: white;
+  /* 文字顏色 */
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+#Holder,
+#canvasHolder,
+.rectangle {
+  pointer-events: auto;
+  /* 確保這些父容器允許點擊事件 */
+}
+
+
+.background-lock {
+  background-position: center top;
+  /* 根据需要调整，以匹配背景上移后的最终位置 */
+  background-attachment: fixed;
+  /* 锁定背景图 */
+}
+
+#content-area button {
+  position: relative;
+  /* 相对定位 */
+  z-index: 100;
+  /* 确保按钮的 z-index 高于蝴蝶 GIF */
+  /* 按钮的其他样式 */
+}
+
+.fade-out {
+  opacity: 0;
+  /* 透明度變為0，實現淡出效果 */
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+/* 淡出效果 */
+/* 淡出效果 */
+.fadeout {
+  opacity: 0;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+  /* 修改时间从 2s 到 4s */
+}
+
+@keyframes fadeOutEffect {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* 修改背景移動的類別 */
+.move-up {
+  background-position: center top;
+  transition: transform 2s ease-in-out, background-position 2s ease-in-out;
+}
+
+/* 淡入效果 */
+.fade-in {
+  animation: fadeIn 1s;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 淡入效果 */
+.fadein {
+  animation: fadeInEffect 0.5s forwards;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Zen+Old+Mincho:700,400|Italiana:400");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Inter", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #92a2b5 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+#overlay {
+  display: none;
+  /* Keep as is to initially hide the overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  /* Semi-transparent background */
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  /* Start with zero opacity for fade-in effect */
+  transition: opacity 0.5s ease-in-out;
+  /* Smooth transition for opacity */
+}
+
+.modal-content {
+  font-family: 'Inter', sans-serif;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  font-size: 18px;
+  display: flex;
+  /* Use flexbox */
+  flex-direction: column;
+  /* Stack children vertically */
+  justify-content: center;
+  /* Center children vertically */
+  align-items: center;
+  /* Center children horizontally */
+  letter-spacing: 0.5px;
+}
+
+.modal-content img,
+.modal-content p,
+.modal-content button {
+  margin-top: 10px;
+  /* Adds top margin */
+  margin-bottom: 10px;
+  /* Adds bottom margin */
+  width: auto;
+  /* Allows default or specified width */
+}
+
+#confirm-button {
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* 鎖測驗遮罩 */
+/* #overlay {
+  display: none;
+  position: fixed;
+  font-family: "Inter", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(194, 194, 194, 0.5);
+  z-index: 1000;
+  color: white;
+  text-align: center;
+  padding-top: 20%;
+  font-size: 20px;
+}
+
+#lock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 1001;
+  width: 100px;
+  height: auto;
+  filter: brightness(0) invert(1);
+
+}
+
+.non-clickable {
+  pointer-events: none;
+  opacity: 0.5;
+} */
+
+
+@media screen and (max-width: 600px) {
+
+  body {
+    overflow: hidden;
+  }
+
+  .content {
+    background-size: cover;
+  }
+
+  .text-wrapper-4 img {
+    width: 4.5em;
+  }
+
+  .text-wrapper-5 {
+    font-size: 1.2rem;
+  }
+
+
+  /* .bridge .rectangle {
+    position: absolute;
+    height: 160px;
+    width: 100vw;
+    left: 100px;
+    z-index: 100;
+
+  } */
+
+  .pre,
+  .pre-2,
+  .pre-comp {
+    display: none;
+  }
+
+
+  .flexcontainer {
+    width: 336px;
+    position: fixed;
+    z-index: 1;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #explore-button {
+    width: 40%;
+    margin-top: 200px;
+    position: fixed;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  .butguide {
+    margin: 0 -80px 0 190px;
+    padding: 10px;
+    left: 0;
+    z-index: 100;
+    font-size: 1rem;
+  }
+
+
+  .input-wrapper {
+    /* display: flex; */
+    width: 100%;
+    margin-top: 15px;
+    z-index: 999;
+  }
+
+  .input,
+  #submitButton {
+    flex: 1;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 1em
+  }
+
+  .input {
+    order: 1;
+    width: auto;
+  }
+
+  #submitButton {
+    order: 2;
+    width: auto;
+  }
+
+  .text-wrapper-4 {
+    left: 14vw;
+    font-size: 72px;
+
+  }
+
+  .new-content {
+    top: 10%;
+  }
+
+  #canvasHolder {
+    padding-top: 50px;
+    z-index: 1;
+  }
+
+  /* #canvasHolder {
+    margin-top: 10%;
+  } */
+
+  #canvas {
+    padding: 0;
+    margin: 0 0 0 0;
+    margin-left: -10px;
+  }
+
+
+  #buttonContainer {
+    display: flex;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-wrap: wrap !important;
+    width: 100%;
+    z-index: 100;
+  }
+
+  #buttonContainer button {
+    max-width: fit-content;
+    font-size: 14px;
+    z-index: 100;
+
+  }
+
+  .rectangle {
+    top: 210px !important;
+    z-index: 100;
+
+  }
+
+  /* .intro-textbox {
+    position: fixed;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    text-align: center;
+    z-index: 100;
+  } */
+  .intro-textbox {
+    margin-top: 25%;
+    width: 80%;
+    z-index: 100;
+  }
+
+  .intro-textbox h2 {
+    font-size: 16px;
+  }
+
+  .intro-textbox p {
+    font-size: 12px;
+  }
+
+
+  .content {
+    background-size: 180vh;
+  }
+
+
+  .tooltip {
+    z-index: 99;
+    margin-top: 5%;
+  }
+
+  .tooltip-item {
+    z-index: 99;
+
+    font-size: 10px;
+  }
+
+  .tooltip-label {
+    z-index: 99;
+
+    font-size: 8px;
+  }
+
+  button {
+    font-size: 1.6em;
+  }
+
+  .box1 {
+    width: 100%;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 601px) and (max-width: 920px) {
+  .box1 {
+    width: 80%;
+  }
+
+  .pre {
+    display: none;
+  }
+
+  .pre-2 {
+    width: auto;
+    height: 500px;
+    top: 0px;
+    left: 100px;
+    position: fixed;
+    mix-blend-mode: lighten;
+  }
+
+
+  .pre-comp {
+    width: 279px;
+    height: 286px;
+    top: 700px;
+    left: 451px;
+    position: fixed;
+    mix-blend-mode: lighten;
+  }
+
+  .overlap {
+    width: 70vw;
+    margin: 0px 8vw 0;
+  }
+
+  #canvasHolder {
+    margin-top: 0;
+  }
+
+  .text-wrapper-4 img {
+    width: 25em;
+  }
+
+  .text-wrapper-5 {
+    font-size: 1.5rem;
+  }
+
+  #explore-button {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+
+  }
+
+  .new-content {
+    top: 10%;
+  }
+
+  .input,
+  #submitButton {
+    flex: 1;
+    /* 使 input 和按鈕分享可用空間 */
+    height: 35px;
+    /* 統一高度 */
+    margin: 0 5px;
+    /* 添加一些間距 */
+    font-size: 1em
+  }
+
+  .input {
+    order: 1;
+    /* 確保 input 在左側 */
+  }
+
+  #submitButton {
+    order: 2;
+    /* 確保按鈕在右側 */
+  }
+
+  #buttonContainer {
+    display: flex;
+    /* Ensures the container uses flexbox layout */
+    flex-wrap: wrap;
+    /* Allows buttons to wrap onto the next line */
+    justify-content: center;
+    /* Ensures the container uses flexbox layout */
+    position: absolute;
+    /* Position it relative to the nearest positioned ancestor */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 100;
+    margin-top: 10px;
+    /* Adds space above the container */
+  }
+
+  #buttonContainer button {
+    max-width: fit-content;
+    font-size: 1em;
+  }
+
+  .intro-textbox {
+    margin-top: 20%;
+    width: 100%;
+  }
+
+  .butguide {
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+
+
+}
+
+/* laptop */
+@media screen and (min-width: 921px) and (max-width: 1400px) {
+
+  .overlap {
+    width: 70vw;
+    margin: 0px 8vw 0;
+  }
+
+  /* 
+
+  #canvasHolder {
+    margin-top: 0;
+  } */
+  .content {
+    flex-direction: row;
+    /* 改為水平排列 */
+    align-items: center;
+    /* 子元素垂直居中 */
+    justify-content: center;
+  }
+
+  .box1,
+  #explore-button {
+    margin: 10px;
+    /* 添加間距以避免元素相互靠太近 */
+  }
+
+  .text-wrapper-4 img {
+    width: 30em;
+  }
+
+  .text-wrapper-5 {
+    font-size: 1.2rem;
+  }
+
+  #explore-button {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+
+  }
+
+  .new-content {
+    top: 12%;
+  }
+
+  .input,
+  #submitButton {
+    flex: 1;
+    /* 使 input 和按鈕分享可用空間 */
+    height: 35px;
+    /* 統一高度 */
+    margin: 0 5px;
+    /* 添加一些間距 */
+    font-size: 1.2rem
+  }
+
+  .input {
+    order: 1;
+    /* 確保 input 在左側 */
+  }
+
+  #submitButton {
+    order: 2;
+    /* 確保按鈕在右側 */
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #buttonContainer {
+    position: absolute;
+    /* Position it relative to the nearest positioned ancestor */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 100;
+    margin-top: 5px;
+  }
+
+  #buttonContainer button {
+    max-width: fit-content;
+    font-size: 1.1rem;
+  }
+
+  .intro-textbox {
+    margin-top: 5%;
+    width: 120%;
+    transform: scale(0.9);
+  }
+
+  .butguide {
+    bottom: 0;
+    font-size: 1rem;
+  }
+
+
+
+}
+
+/* computer */
+@media screen and (min-width: 1401px) {
+  .content {
+    flex-direction: row;
+    /* 改為水平排列 */
+    align-items: center;
+    /* 子元素垂直居中 */
+    justify-content: center;
+  }
+
+  .box1,
+  #explore-button {
+    margin: 10px;
+    /* 添加間距以避免元素相互靠太近 */
+  }
+
+  .overlap {
+    width: 70vw;
+    margin: 0px 8vw 0;
+  }
+
+  .new-content {
+    top: 10%;
+  }
+
+  #canvasHolder {
+    margin-top: 0;
+  }
+
+  #canvas {
+    margin-top: 0;
+  }
+
+  .intro-textbox {
+    margin-top: 10px;
+  }
+
+  #explore-button {
+    font-size: 1.2rem;
+  }
+
+  #buttonContainer button {
+    margin-top: 10px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .input {
+    height: 45px;
+
+  }
+
+  #submitButton {
+    font-size: 1.2rem;
+    height: 45px;
+  }
+}

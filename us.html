@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="us_style.css" />
+  <link rel="stylesheet" href="banner.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MULTiFLY</title>
+  <link rel="icon" href="img/icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+</head>
+
+<body class="fade-in">
+  <!-- banner -->
+  <div class="all">
+    <div class="banner">
+      <div class="overlap-7">
+        <img class="LOGO-ref" src="img/logo_brown.png" />
+        <a href="#home" class="multifly" id="link-home">
+          <img src="img/logo-goldd.png" alt="Multifly">
+        </a>
+        <img src="img/menu.png" class="mobile-menu-icon" alt="Menu" />
+      </div>
+      <!-- Desktop Menu Items -->
+      <div class="desktop-menu">
+        <a href="us.html" class="about-us">關於我們</a>
+        <a href="collaboration.html" class="collaboration">合作對象</a>
+        <a href="https://www.instagram.com/multiflyskin/?hl=zh-tw" class="merch">周邊商品</a>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <a href="us.html" class="about-us">關於我們</a>
+        <a href="collaboration.html" class="collaboration">合作對象</a>
+        <a href="https://www.instagram.com/multiflyskin/?hl=zh-tw" class="merch">周邊商品</a>
+      </div>
+    </div>
+    <div class="banneroverlay"></div>
+  </div>
+  <!-- our mission -->
+  <div class="mission">
+    <div class="mission-container"> <!-- New container for flexbox -->
+      <div class="missiontext">
+        <p class="mission-title">我們的使命</p>
+        <p class="mission-content">我們的使命是幫助世上每個人實現和平與愛，不因外貌而評斷任何人。</p>
+      </div>
+      <button class="missionbutton">展覽資訊 ⭢</button>
+    </div>
+    <img class="arrow-down-gif" src="https://c.animaapp.com/Hfsk02mU/img/arrow-down-gif-4.gif" />
+  </div>
+
+  <!-- what are we doing -->
+  <div class="doing">
+    <div class="overlap">
+      <div class="doingtitle">我們在做的事情</div>
+      <div class="overlap-wrapper">
+        <div class="overlap-2">
+          <img class="rectangle" src="https://c.animaapp.com/F4BP38la/img/rectangle-605.svg" />
+          <img class="knowledge" src="https://c.animaapp.com/F4BP38la/img/knowledge-1.png" />
+          <div class="doingtext1">
+            <div class="text-wrapper-3">提升大眾知識</div>
+            <div class="text-wrapper-4">透過AI生成輔助，我們的目標是增進人人對於這些皮膚疾病背後原因的理解，並提供醫學知識的見解。</div>
+          </div>
+        </div>
+      </div>
+      <div class="overlap-group-wrapper">
+        <div class="overlap-3">
+          <img class="rectangle-2" src="https://c.animaapp.com/F4BP38la/img/rectangle-606.svg" />
+          <div class="doingtext2">
+            <div class="text-wrapper-6">增進自信心</div>
+            <div class="text-wrapper-5">使人人都能坦然接受自己的外貌，<br />並將心力專注於自己的優勢以及價值。</div>
+          </div>
+          <img class="pic" src="https://c.animaapp.com/F4BP38la/img/logo-ref-------1.png" />
+        </div>
+      </div>
+      <img class="mask-group" src="https://c.animaapp.com/F4BP38la/img/mask-group.png" />
+    </div>
+    <img class="arrow-down-gif" src="https://c.animaapp.com/Hfsk02mU/img/arrow-down-gif-4.gif" />
+  </div>
+
+  <!-- HELP THOSE IN NEED -->
+  <div id="about-us-section" class="aboutus">
+    <div class="view">
+      <div class="overlap">
+        <div class="overlap-group">
+          <div class="text-wrapper">協助人們</div>
+          <div class="image-scroll-container">
+            <img class="imgs" src="img/inNeed.png" />
+          </div>
+          <p class="aimto">
+            我們不僅幫助因為皮膚而感到不自信的人，同時我們也與基金會合作，<br />協助基金會進行活動，我們誠摯地邀請您一同幫助需要幫助的人。
+          </p>
+        </div>
+        <button class="helpskin">了解更多 ⭢</button>
+        <div class="overlap-2">
+          <img class="arrow-down-gif" src="https://c.animaapp.com/Hfsk02mU/img/arrow-down-gif-4.gif" />
+          <div class="text-wrapper-2">回到最上方</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-menu">
+      <button onclick="scrollToTop()">我們的任務</button>
+      <button onclick="scrollToElement('.doing')">我們在做的事情</button>
+      <button onclick="scrollToElement('.aboutus')">關於我們</button>
+    </div>
+  </footer>
+
+  <!-- js -->
+  <script>
+    // This function should be defined in the global scope
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    function scrollToElement(selector) {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // 当点击 mission 区域的箭头时
+      document.querySelector('.mission .arrow-down-gif').addEventListener('click', function () {
+        document.querySelector('.doing').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // 当点击 doing 区域的箭头时
+      document.querySelector('.doing .arrow-down-gif').addEventListener('click', function () {
+        // 修改选择器为 .aboutus 以滚动到正确的区域，并保持平滑滚动
+        document.querySelector('#about-us-section').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // mission 区域的按钮特效
+      document.querySelector('.mission .missionbutton').addEventListener('click', function () {
+        document.body.classList.add('fade-out');
+        setTimeout(function () {
+          window.location.href = 'exhibition.html'; // 替换为目标页面 URL
+        }, 1000); // 等待 1 秒
+      });
+
+      // aboutus 区域的按钮特效
+      document.querySelector('.aboutus .helpskin').addEventListener('click', function () {
+        document.body.classList.add('fade-out');
+        setTimeout(function () {
+          window.location.href = 'collaboration.html'; // 替换为目标页面 URL
+        }, 1000); // 等待 1 秒
+      });
+
+      // 滚动回 mission 区域的代码（如有必要，也可以保留或调整）
+      document.querySelector('.aboutus .overlap-2').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      let animationTriggered = { mission: false, doing: false, aboutUs: false };
+
+      window.addEventListener('scroll', function () {
+        const missionOffset = document.querySelector('.mission').offsetTop;
+        const doingOffset = document.querySelector('.doing').offsetTop;
+        const aboutUsOffset = document.querySelector('.about-us').offsetTop;
+
+        const windowHeight = window.innerHeight;
+        const scrollY = window.scrollY;
+
+        // 触发mission区域动画
+        if (!animationTriggered.mission && scrollY + windowHeight > missionOffset) {
+          animationTriggered.mission = true;
+          // 选择你希望从左右飞入的元素，例如:
+          document.querySelectorAll('.mission .fly-in-target').forEach(el => {
+            if (el.classList.contains('left')) {
+              el.classList.add('fly-in-left');
+            } else {
+              el.classList.add('fly-in-right');
+            }
+          });
+        }
+
+        // 触发doing区域动画
+        if (!animationTriggered.doing && scrollY + windowHeight > doingOffset) {
+          animationTriggered.doing = true;
+          // 同上，选择并触发动画
+        }
+
+        // 触发about-us区域动画
+        if (!animationTriggered.aboutUs && scrollY + windowHeight > aboutUsOffset) {
+          animationTriggered.aboutUs = true;
+          // 同上，选择并触发动画
+        }
+      });
+
+      // 滾動照片
+      window.onload = function () {
+        var imgContainer = document.querySelector('.image-scroll-container');
+        var imgs = document.querySelectorAll('.image-scroll-container img');
+
+        // This function ensures images can load and then adjust scroll settings.
+        imgs.forEach(img => {
+          if (img.complete) {
+            setupScroll(imgContainer);
+          } else {
+            img.onload = () => {
+              setupScroll(imgContainer);
+            };
+          }
+        });
+      };
+
+      function setupScroll(container) {
+        // Optionally, you can set an initial scroll position here if needed.
+        // For example, scroll to the middle image:
+        // container.scrollLeft = container.scrollWidth / 2 - container.clientWidth / 2;
+
+        // Removing automatic scroll reset by commenting out or modifying existing code
+        // e.g., container.scrollLeft = calculatedValue; (comment this out or adjust)
+      }
+
+
+
+      /* footer */
+      const footer = document.querySelector('.footer');
+      let scrollTimeout = null;
+
+      // 滚动事件监听
+      window.addEventListener('scroll', function () {
+        // 当用户滚动时，添加隐藏类
+        footer.classList.add('hidden');
+
+        // 清除之前的 setTimeout
+        clearTimeout(scrollTimeout);
+
+        // 设置延时，当用户停止滚动 3 秒后，移除隐藏类显示 footer
+        scrollTimeout = setTimeout(() => {
+          footer.classList.remove('hidden');
+        }, 300);
+      });
+
+      // Get all the buttons in the footer menu
+
+      var footerButtons = document.querySelectorAll('.footer-menu button');
+
+      // Add a click event listener to each button
+      footerButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          // First remove the 'active' class from all buttons
+          footerButtons.forEach(function (btn) {
+            btn.classList.remove('active');
+          });
+
+          // Add the 'active' class to the clicked button
+          this.classList.add('active');
+        });
+      });
+
+
+      // 內容滑動特效
+      const observerOptions = {
+        root: null, // 相對於視窗
+        threshold: 0.5, // 元素50%進入視窗時觸發
+        rootMargin: "0px"
+      };
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // 當元素進入視窗時，添加動畫類
+            entry.target.classList.add('fly-in');
+          } else {
+            // 離開視窗時可以選擇移除動畫類，這樣滾動回來時可以再次觸發動畫
+            entry.target.classList.remove('fly-in');
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+      // 選擇需要觸發動畫的元素
+      const sections = document.querySelectorAll('.mission, .doing, .aboutus');
+      sections.forEach(section => {
+        // 對每個區塊內的特定元素添加觀察
+        const elements = section.querySelectorAll('.missiontext, .doingtitle, .doingtext1, .doingtext2, .text-wrapper, .aimto, .image-scroll-container');
+        elements.forEach(el => {
+          observer.observe(el);
+        });
+      });
+
+      document.addEventListener('scroll', function () {
+        // 獲取目前滾動位置距離頁面頂部的距離
+        var scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        // 獲取各區域的位置
+        var missionPosition = document.querySelector('.mission').offsetTop;
+        var doingPosition = document.querySelector('.doing').offsetTop;
+        var aboutUsPosition = document.querySelector('.aboutus').offsetTop;
+
+        // 移除所有按鈕的active類
+        var buttons = document.querySelectorAll('.footer-menu button');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // 根據滾動位置更新按鈕的active類
+        if (scrollPosition >= aboutUsPosition) {
+          document.querySelector('button[onclick="scrollToElement(\'.aboutus\')"]').classList.add('active');
+        } else if (scrollPosition >= doingPosition) {
+          document.querySelector('button[onclick="scrollToElement(\'.doing\')"]').classList.add('active');
+        } else if (scrollPosition >= missionPosition) {
+          document.querySelector('button[onclick="scrollToTop()"]').classList.add('active');
+        }
+      });
+
+    });
+  </script>
+  <script src="banner.js"></script>
+
+</body>
+
+</html>

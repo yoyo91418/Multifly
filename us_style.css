@@ -1,0 +1,2191 @@
+/* 基本重置以及全局設定 */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-image: url('img/bg_aboutus.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: scroll; */
+    /* Add this line */
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    /* 確保所有圖片都是響應式的 */
+    height: auto;
+}
+
+/* 主要內容區域樣式 */
+.mission,
+.doing {
+    text-align: center;
+    padding: 30px;
+    transform: scale(0.85);
+}
+
+.mission {
+    margin-top: 90px;
+}
+
+.mission-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    /* 確保容器填滿父元素 */
+}
+
+.missiontext,
+.missionbutton {
+    margin: 20px;
+    /* 確保有適當的間距 */
+}
+
+.missiontext {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    /* Center the text */
+    margin: 20px;
+    /* 提供一些間隔 */
+}
+
+.mission .mission-title {
+    font-family: "Inter", Helvetica;
+    font-size: 70px;
+    font-weight: 800;
+    color: #4A3F3F;
+    margin: 50px auto;
+    letter-spacing: 4px;
+}
+
+.mission .mission-content {
+    font-family: "Inter", Helvetica;
+    font-size: 24px;
+    /* Size similar to the image text */
+    color: #3C3C3C;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.mission-title,
+.mission-content {
+    margin: 0 10px;
+    /* 在標題和內容之間提供間距 */
+}
+
+.mission .missionbutton {
+    font-family: "Inter", Helvetica;
+    background-color: #7B6F52;
+    /* Change this to your desired button color */
+    color: white;
+    /* Change this to your desired text color */
+    padding: 14px 22px;
+    border: none;
+    border-radius: 50px;
+    /* Adjust this value to change the roundness of the corners */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+    /* order: 2; */
+
+}
+
+.missionbutton:hover {
+    background-color: #4e4735;
+    /* Color for the button on hover */
+}
+
+.mission .arrow-down-gif {
+    cursor: pointer;
+    /* 提示用戶可點擊 */
+    margin-top: -100px;
+    /* 或者增加 margin-top 的負值 */
+    transform: scale(0.1);
+    /* 等比例縮小6倍 */
+    position: relative;
+    z-index: 101;
+}
+
+.doing {
+    color: #4a3f3f;
+    line-height: normal;
+    font-family: "Inter", Helvetica;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: -200px;
+    /* Added to reduce the gap to 'mission' */
+    transform: scale(0.7);
+    padding-top: 90px;
+}
+
+.doing .arrow-down-gif {
+    cursor: pointer;
+    /* 提示用戶可點擊 */
+    margin-top: -430px;
+    transform: scale(0.1);
+    /* 等比例縮小6倍 */
+    position: relative;
+    z-index: 101;
+
+}
+
+.doing .doingtitle {
+    font-weight: 800;
+    color: #4a3f3f;
+    font-size: 50px;
+    line-height: normal;
+    font-family: "Inter", Helvetica;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+.doing .text-wrapper-3 {
+    width: 500px;
+    height: 48px;
+    font-weight: 800;
+    color: #000000;
+    font-size: 32px;
+    line-height: normal;
+    font-family: "Inter", Helvetica;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: -550px;
+}
+
+.doing .doingtext1,
+.doing .doingtext2 {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 確保子元素垂直和水平居中 */
+    z-index: 3;
+}
+
+.doing .text-wrapper-4 {
+    width: 500px;
+    height: 85px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 24.2px;
+}
+
+.doing .rectangle {
+    transform: scale(1.1);
+    margin-top: 50px;
+    margin-right: 200px;
+}
+
+.doing .knowledge {
+    /* 使用 transform 来移动图片，不会影响到其他元素的布局 */
+    margin-left: 750px;
+    /* 水平移动，根据需要调整 */
+    transition: transform 0.3s ease;
+    /* 添加平滑过渡效果 */
+    transform: translateY(-350px) scale(1);
+}
+
+.doing .rectangle-2,
+.doing .pic {
+    position: relative;
+    /* 確保 z-index 有效 */
+}
+
+.doing .rectangle-2 {
+    position: relative;
+    /* 確保 z-index 有效 */
+    transform: scale(1.1);
+    margin-top: 50px;
+    margin-left: 200px;
+    z-index: 1;
+}
+
+.doing .pic {
+    margin-left: -600px;
+    margin-top: -345px;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.doing .text-wrapper-5 {
+    width: 500px;
+    height: 71px;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Inter", Helvetica;
+    text-align: center;
+    letter-spacing: 0;
+}
+
+.doing .text-wrapper-6 {
+    width: 500px;
+    height: 47px;
+    font-weight: 900;
+    color: #000000;
+    font-size: 32px;
+    line-height: normal;
+    font-family: "Inter", Helvetica;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: -180px;
+}
+
+.doing .mask-group {
+    position: relative;
+    z-index: 3;
+    transform: translateY(-300px) scale(0.7);
+    margin-right: 0;
+}
+
+.aboutus {
+    padding-top: 100px;
+    margin-top: -200px;
+    text-align: center;
+    /* 根據需要保留或調整此值 */
+    transform: scale(0.85);
+}
+
+.aboutus .overlap {
+    margin: 0 auto;
+}
+
+.aboutus .overlap-2 {
+    display: flex;
+    /* 启用 flex 布局 */
+    flex-direction: column;
+    /* 默认为列排列，但可以根据需要调整 */
+    align-items: center;
+    /* 水平居中对齐子元素 */
+    justify-content: center;
+    /* 垂直居中 */
+    cursor: pointer;
+    /* 提示用戶可點擊 */
+    margin-top: -210px;
+    /* 或者增加 margin-top 的負值 */
+    transform: scale(0.3);
+    /* 等比例縮小6倍 */
+}
+
+.aboutus .imgs {
+    transform: scale(0.85);
+}
+
+.aboutus .text-wrapper {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #4a3f3f;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.aboutus .aimto {
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #4A3F3F;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    margin: 10px;
+}
+
+.aboutus .helpskin {
+    font-family: "Inter", Helvetica;
+    background-color: #7B6F52;
+    /* Change this to your desired button color */
+    color: white;
+    /* Change this to your desired text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    /* Adjust this value to change the roundness of the corners */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+    order: 2;
+    position: relative;
+    z-index: 200;
+}
+
+.helpskin:hover {
+    background-color: #4e4735;
+    /* Color for the button on hover */
+}
+
+.aboutus .text-wrapper-2 {
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 55px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -150px;
+}
+
+.aboutus .arrow-down-gif {
+    margin-top: 50px;
+    transform: scale(0.1) rotate(180deg);
+    z-index: 101;
+}
+
+.footer {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    /* transparent background */
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1050;
+    /* Ensure the footer is above other content */
+    /* 預設是隱藏的 */
+    transition: transform 0.5s ease-in-out;
+    /* 平滑過渡效果 */
+
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    /* To position the active state indicator */
+}
+
+.footer-menu button {
+    background-color: rgba(0, 0, 0, 0);
+    /* transparent background */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+    /* Needed for the pseudo-element to work */
+}
+
+.footer-menu button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    /* Line is transparent by default */
+    transition: background-color 0.3s;
+}
+
+.footer-menu button:hover::after,
+.footer-menu button.active::after {
+    background-color: rgb(88, 88, 88);
+    /* Change to your preferred color */
+}
+
+.footer.hidden {
+    transform: translateY(100%);
+    /* 将 footer 向下隐藏 */
+}
+
+/* 飛入動畫的初始狀態 */
+.missiontext,
+.doingtitle,
+.doingtext1,
+.doingtext2,
+.text-wrapper,
+.aimto,
+.image-scroll-container {
+    opacity: 0;
+    transform: translateX(-100px);
+    /* 從左向右滑入 */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* 添加飛入樣式時的終止狀態 */
+.fly-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 媒體查詢 - 針對不同設備尺寸進行優化 */
+@media screen and (max-width: 767px) {
+
+    /* 确保内容不会被固定的 header 或 footer 遮住 */
+    body {
+        /* footer 的高度 */
+        background-size: auto;
+    }
+
+    .mission,
+    .doing,
+    .aboutus {
+        flex-direction: column;
+        margin-bottom: 50px;
+        /* 底部外边距的值应等于或大于 footer 的高度 */
+    }
+
+    .aboutus {
+        flex-direction: column;
+        padding-top: 70px;
+        margin: -100px auto;
+        margin-bottom: 50px;
+        /* 增加 `.aboutus` 與頁面底部的距離 */
+    }
+
+    .footer {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        /* 设置为透明 */
+        color: rgb(16, 16, 16);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1050;
+        font-family: 'Inter', sans-serif;
+        /* 確保 footer 在其他內容上方 */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        /* Optional: Adds a shadow for better visibility */
+
+    }
+
+    .mission .missionbutton,
+    .aboutus .overlap-2 {
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+        margin-top: 150px;
+        /* 或者增加 margin-top 的負值 */
+    }
+
+    .mission-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mission .mission-title {
+        font-size: 60px;
+    }
+
+    .mission .mission-content {
+        font-size: 24px;
+    }
+
+    .doing {
+        margin-top: -50px;
+        transform: scale(1);
+    }
+
+    .doing .doingtitle {
+        font-size: 35px;
+
+    }
+
+    .mission .arrow-down-gif,
+    .doing .arrow-down-gif,
+    .aboutus .overlap-2,
+    .doing .rectangle,
+    .doing .rectangle-2,
+    .doing .mask-group {
+        display: none;
+    }
+
+    .doing .knowledge {
+        transform: translateX(10px);
+        /* 在最小的屏幕上进行最细微的调整 */
+    }
+
+    /* 确保 .doing 下的直接子元素使用 flex 布局 */
+    .doing>.overlap,
+    .doing>.overlap-wrapper,
+    .doing>.overlap-group-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doing .overlap,
+    .doing .overlap-wrapper,
+    .doing .overlap-group-wrapper {
+        width: 100%;
+        /* 使 .overlap 与视窗同宽 */
+        margin: auto;
+        /* 居中对齐 */
+        margin-top: 5%;
+    }
+
+    .doing .arrow-down-gif {
+        margin-top: -200px;
+        /* 添加一点间距在它和上方内容之间 */
+    }
+
+    /* 调整 .doingtext1 和 .knowledge 的容器样式，使其并排显示 */
+    .doing .overlap-wrapper .overlap-2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* 调整 .doingtext2 和相应图片的容器样式，使其并排显示 */
+    .doing .overlap-group-wrapper .overlap-3 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* 调整 knowledge 图片和 doingtext1 文本的样式 */
+    .doing .knowledge,
+    .doing .doingtext1 {
+        width: calc(50% - 20px);
+        margin: 10px 10px;
+        box-sizing: border-box;
+    }
+
+    .doing .doingtext1,
+    .doing .doingtext2 {
+        color: #4A3F3F;
+
+    }
+
+    /* 调整 doingtext2 文本和相应图片的样式 */
+    .doing .doingtext2,
+    .doing .pic {
+        width: calc(50% - 20px);
+        margin: 10px 10px;
+        box-sizing: border-box;
+    }
+
+    /* 确保文字和图片均可适当地缩放和对齐 */
+    .doing .text-wrapper-3,
+    .doing .text-wrapper-4,
+    .doing .text-wrapper-5,
+    .doing .text-wrapper-6 {
+        width: 100%;
+        margin: 0 auto;
+        /* 自动调整边距以居中 */
+        font-size: 16px;
+        /* 可能需要调整以适应较小屏幕 */
+    }
+
+    .image-scroll-container {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .image-scroll-container::-webkit-scrollbar {
+        display: none;
+        /* 隐藏 Chrome, Safari 和 Opera 的滚动条 */
+    }
+
+    .image-scroll-container img {
+        transform: scale(0.8);
+        max-width: none;
+        height: auto;
+        display: inline-block;
+    }
+
+    .aboutus .text-wrapper {
+        font-size: 40px;
+    }
+
+    .aboutus .aimto {
+        margin-top: -20px;
+    }
+
+    .footer-menu button {
+        flex: 1;
+        /* Make the buttons fill the footer evenly */
+        color: #4A3F3F;
+    }
+
+}
+
+/* 手機 */
+@media screen and (max-width: 600px) {
+
+    /* 确保内容不会被固定的 header 或 footer 遮住 */
+    body {
+        overflow-x: hidden;
+        background-size: auto;
+        /* footer 的高度 */
+    }
+
+
+    .mission {
+        margin: 0px;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .mission,
+    .doing {
+        flex-direction: column;
+        margin-bottom: 50px;
+        /* 底部外边距的值应等于或大于 footer 的高度 */
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+
+    .aboutus {
+        flex-direction: column;
+        margin: -100px auto;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        /* 增加 `.aboutus` 與頁面底部的距離 */
+        overflow-x: hidden;
+    }
+
+    .aboutus .view {
+        margin-top: 30px;
+    }
+
+    .footer {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        /* 设置为透明 */
+        color: rgb(16, 16, 16);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1050;
+        font-family: 'Inter', sans-serif;
+        /* 確保 footer 在其他內容上方 */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        /* Optional: Adds a shadow for better visibility */
+    }
+
+    .mission .missiontext {
+        margin-top: 100px;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .mission .mission-title {
+        width: 100%;
+        font-size: 54px;
+    }
+
+    .mission .mission-content {
+        font-size: 20px;
+        margin: 0;
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+
+    .mission .missionbutton,
+    .aboutus .overlap-2 {
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+        margin-top: 100px;
+        /* 或者增加 margin-top 的負值 */
+
+    }
+
+    .doing {
+        margin-top: -180px;
+        padding-top: 30px;
+        margin-bottom: -50px;
+        padding-bottom: -30px;
+    }
+
+    .doing .doingtitle {
+        font-size: 36px;
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+        /* Changed from center to left */
+        margin-top: 50px;
+    }
+
+    .mission .arrow-down-gif,
+    .doing .arrow-down-gif,
+    .aboutus .overlap-2,
+    .doing .rectangle,
+    .doing .rectangle-2,
+    .doing .mask-group {
+        display: none;
+    }
+
+    .doing .overlap-2,
+    .doing .overlap-3,
+    .doing .overlap-wrapper,
+    .doing .overlap-group-wrapper {
+        align-items: flex-start;
+        /* Aligns child elements to the start (left) */
+    }
+
+    .doing .knowledge {
+        transform: translateX(50px)scale(1.8);
+        /* 在最小的屏幕上进行最细微的调整 */
+        transform-origin: center center;
+        /* 防止水平滾動 */
+        overflow-x: hidden;
+    }
+
+    .doing .pic {
+        transform: translateX(-30px)scale(1.8);
+        transform-origin: center center;
+        /* 防止水平滾動 */
+        overflow-x: hidden;
+    }
+
+    .doing .overlap-3 {
+        margin-top: 10%;
+    }
+
+    /* 确保 .doing 下的直接子元素使用 flex 布局 */
+    .doing>.overlap,
+    .doing>.overlap-wrapper,
+    .doing>.overlap-group-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doing .overlap,
+    .doing .overlap-wrapper {
+        width: 100%;
+        /* 使 .overlap 与视窗同宽 */
+        margin: auto;
+        /* 居中对齐 */
+        margin-top: 10%;
+    }
+
+    .doing .overlap-wrapper {
+        width: 100%;
+        /* 使 .overlap 与视窗同宽 */
+        margin: auto;
+        /* 居中对齐 */
+        margin-top: 9%;
+    }
+
+    .doing .arrow-down-gif {
+        margin-top: -200px;
+        /* 添加一点间距在它和上方内容之间 */
+    }
+
+    /* 调整 .doingtext1 和 .knowledge 的容器样式，使其并排显示 */
+    .doing .overlap-wrapper .overlap-2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* 调整 .doingtext2 和相应图片的容器样式，使其并排显示 */
+    .doing .overlap-group-wrapper .overlap-3 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .doing .overlap-wrapper .overlap-2,
+    .doing .overlap-group-wrapper .overlap-3 {
+        flex-direction: row-reverse;
+        /* 將flex方向設為反向 */
+    }
+
+    /* 調整具體元素的順序和寬度 */
+    .doing .doingtext1,
+    .doing .pic {
+        order: 2;
+        /* 將圖片放在文本前 */
+    }
+
+    .doing .knowledge,
+    .doing .doingtext2 {
+        order: 1;
+        /* 將文本放在圖片後 */
+    }
+
+    /* 確保元素佔滿可用空間 */
+    .doing .knowledge,
+    .doing .doingtext1,
+    .doing .pic,
+    .doing .doingtext2 {
+        width: calc(50% - 20px);
+        /* 更新寬度設定以適應新排列 */
+    }
+
+    /* 确保文字和图片均可适当地缩放和对齐 */
+    .doing .text-wrapper-3,
+    .doing .text-wrapper-4,
+    .doing .text-wrapper-5,
+    .doing .text-wrapper-6 {
+        width: 100%;
+        margin: 0 auto;
+        /* 自动调整边距以居中 */
+    }
+
+    .doing .text-wrapper-4,
+    .doing .text-wrapper-5 {
+        margin-top: -10px;
+    }
+
+    .doing,
+    .doing .doingtitle,
+    .doing .text-wrapper-3,
+    .doing .text-wrapper-4,
+    .doing .text-wrapper-5,
+    .doing .text-wrapper-6,
+    .doing .doingtext1,
+    .doing .doingtext2 {
+        text-align: left;
+        /* Aligns text to the left */
+    }
+
+    .aboutus {
+        text-align: left;
+        /* Aligns text to the left */
+        padding-left: 0;
+        /* Adds padding to ensure content is not too close to the edge */
+        padding-top: 75px;
+        margin-top: -150px;
+        margin-bottom: 50px;
+
+    }
+
+    .aboutus .text-wrapper,
+    .aboutus .aimto,
+    .aboutus .helpskin,
+    .aboutus .view,
+    .aboutus .overlap-2,
+    .aboutus .text-wrapper-2 {
+        align-items: flex-start;
+        /* Aligns content to the start (left) */
+        text-align: left;
+        /* Ensures text within these elements is aligned left */
+        justify-content: flex-start;
+        /* Aligns flex items to the start (left) */
+    }
+
+    .image-scroll-container,
+    .aboutus .imgs {
+        justify-content: flex-start;
+        /* Aligns images to the start (left) */
+    }
+
+    /* Ensure that all buttons and links within .aboutus are aligned to the left */
+    .aboutus a,
+    .aboutus button {
+        text-align: left;
+        /* Aligns text inside buttons and links to the left */
+    }
+
+    .aboutus .overlap-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutus .image-scroll-container {
+        order: 2;
+        /* 推遲到第二位顯示 */
+    }
+
+    .aboutus .aimto {
+        order: 1;
+        /* 提前到第一位顯示 */
+    }
+
+    .image-scroll-container {
+        overflow-x: auto;
+        /* Enables horizontal scrolling if content overflows */
+        white-space: nowrap;
+        /* Keeps all images in a single line */
+        scroll-snap-type: x proximity;
+        /* Optional: enhances scroll experience with 'snap' effect */
+        margin-bottom: 30px;
+
+    }
+
+    .image-scroll-container img {
+        display: inline-block;
+        /* Ensures images line up horizontally */
+        width: calc(100% / 0.5);
+        /* Adjusts width to maintain the original width at 70% scale */
+        height: 100%;
+        /* Scales height to 70% of the original */
+        scroll-snap-align: start;
+        /* Aligns images to the start of the scroll container */
+    }
+
+    .aboutus .text-wrapper {
+        font-size: 42px;
+        margin-bottom: 20px;
+
+    }
+
+    .aboutus .aimto {
+        margin-top: 0;
+        line-height: 1.3;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .aboutus .helpskin {
+        background-color: #000000;
+        font-size: 0.95rem;
+        /* margin-top: 10px; */
+        margin-left: 5%;
+        position: relative;
+        z-index: 100;
+
+    }
+
+    .footer-menu button {
+        flex: 1;
+        /* Make the buttons fill the footer evenly */
+        color: #4A3F3F;
+    }
+}
+
+@media screen and (max-width:920px) and (min-width:768px) {
+
+    /* 确保内容不会被固定的 header 或 footer 遮住 */
+    body {
+        overflow-x: hidden;
+        background-size: auto;
+        /* footer 的高度 */
+    }
+
+    .mission,
+    .doing,
+    .aboutus {
+        text-align: center;
+        margin: auto;
+        /* 確保元素水平居中 */
+        width: 100%;
+        /* 設定寬度為100% */
+        box-sizing: border-box;
+        /* 包括邊框和內邊距在內的寬度 */
+        height: 100vh;
+    }
+
+    .mission {
+        margin: 0;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    .mission .missiontext {
+        width: 100%;
+        position: fixed;
+        top: 25%;
+    }
+
+    .mission .mission-title {
+        font-size: 3.6rem;
+    }
+
+    .mission .mission-content {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .mission .missionbutton {
+        font-size: 1.2rem;
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+        margin-top: 600px;
+        /* 或者增加 margin-top 的負值 */
+
+    }
+
+    .doing {
+        margin-top: 0;
+        height: 100vh;
+        flex-direction: column;
+        margin-bottom: 10%;
+        /* 底部外边距的值应等于或大于 footer 的高度 */
+    }
+
+    .doing .doingtitle {
+        font-size: 3.5rem;
+        letter-spacing: 5px;
+        margin-bottom: 50px;
+    }
+
+    .mission .arrow-down-gif,
+    .doing .arrow-down-gif,
+    .aboutus .overlap-2,
+    .doing .rectangle,
+    .doing .rectangle-2,
+    .doing .mask-group {
+        display: none;
+    }
+
+    .doing .knowledge {
+        transform: translateX(10px)scale(1.7);
+        /* 在最小的屏幕上进行最细微的调整 */
+    }
+
+    .doing .pic {
+        transform: translateX(10px)scale(1.7);
+
+    }
+
+    /* 确保 .doing 下的直接子元素使用 flex 布局 */
+    .doing>.overlap,
+    .doing>.overlap-wrapper,
+    .doing>.overlap-group-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doing .overlap,
+    .doing .overlap-wrapper,
+    .doing .overlap-group-wrapper {
+        width: 100%;
+        /* 使 .overlap 与视窗同宽 */
+        margin: auto;
+        /* 居中对齐 */
+        margin-top: 10%;
+    }
+
+    /* 调整 .doingtext1 和 .knowledge 的容器样式，使其并排显示 */
+    .doing .overlap-wrapper .overlap-2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* 调整 .doingtext2 和相应图片的容器样式，使其并排显示 */
+    .doing .overlap-group-wrapper .overlap-3 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* 调整 knowledge 图片和 doingtext1 文本的样式 */
+    .doing .knowledge,
+    .doing .doingtext1 {
+        width: calc(50% - 20px);
+        margin: 20px 5px;
+        box-sizing: border-box;
+    }
+
+    /* 调整 doingtext2 文本和相应图片的样式 */
+    .doing .doingtext2,
+    .doing .pic {
+        width: calc(50% - 20px);
+        margin: 20px 5px;
+        box-sizing: border-box;
+    }
+
+    /* 确保文字和图片均可适当地缩放和对齐 */
+    .doing .text-wrapper-3,
+    .doing .text-wrapper-4,
+    .doing .text-wrapper-5,
+    .doing .text-wrapper-6 {
+        width: 100%;
+        margin: 10px auto;
+        /* 自动调整边距以居中 */
+    }
+
+    .doing .text-wrapper-3 {
+        margin-left: 30%;
+        font-size: 1.9rem;
+        letter-spacing: 2px;
+    }
+
+    .doing .text-wrapper-4 {
+        margin-left: 30%;
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        line-height: 1.3;
+    }
+
+    .doing .text-wrapper-6 {
+        margin-left: -20%;
+        font-size: 1.9rem;
+        letter-spacing: 2px;
+    }
+
+    .doing .text-wrapper-5 {
+        margin-left: -20%;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        letter-spacing: 1.5px;
+
+    }
+
+    .aboutus {
+        height: 100vh;
+        flex-direction: column;
+        margin: 200px auto;
+        margin-top: 10%;
+        /* 增加 `.aboutus` 與頁面底部的距離 */
+    }
+
+    .aboutus .text-wrapper {
+        font-size: 3.5rem;
+        letter-spacing: 5px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .image-scroll-container {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+        transform: scale(1.1);
+        margin-top: 100px;
+    }
+
+    .image-scroll-container::-webkit-scrollbar {
+        display: none;
+        /* 隐藏 Chrome, Safari 和 Opera 的滚动条 */
+    }
+
+    .image-scroll-container img {
+        transform: scale(1);
+        max-width: none;
+        height: auto;
+        display: inline-block;
+    }
+
+    .aboutus .aimto {
+        font-size: 1.5rem;
+        margin-top: 100px;
+    }
+
+    .aboutus .helpskin {
+        font-size: 1.2rem;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .footer {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        /* 设置为透明 */
+        color: rgb(16, 16, 16);
+        text-align: center;
+        padding: 20px 0;
+        z-index: 1050;
+        font-family: 'Inter', sans-serif;
+        /* 確保 footer 在其他內容上方 */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        /* Optional: Adds a shadow for better visibility */
+    }
+
+    .footer-menu button {
+        font-size: 1.2rem;
+        flex: 1;
+        /* Make the buttons fill the footer evenly */
+        color: #4A3F3F;
+    }
+}
+
+@media screen and (max-width:1400px) and (min-width:921px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 根據需要，可以改為center使內容垂直居中 */
+        background-size: auto;
+    }
+
+    .mission,
+    .doing,
+    .aboutus {
+        display: flex;
+        flex-direction: column;
+        /* 如果需要，可以調整方向 */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .mission .mission-container,
+    .doing .overlap-group-wrapper,
+    .aboutus .overlap {
+        width: 100%;
+        /* 使用100%寬度以滿足flex box布局 */
+        margin: 0 auto;
+        /* 水平居中 */
+    }
+
+    .mission {
+        margin-top: 5%;
+    }
+
+    .mission .mission-title {
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 10px;
+        letter-spacing: 6px;
+    }
+
+    .mission .mission-content {
+        text-align: left;
+        align-items: flex-start;
+        letter-spacing: 2.2px;
+        line-height: 1.1;
+    }
+
+    .mission .arrow-down-gif {
+        margin-top: -50px;
+    }
+
+    .doing {
+        transform: scale(0.65);
+    }
+
+    .doing .overlap {
+        margin-top: 30px;
+
+    }
+
+    .doing .overlap-3 {
+        margin-top: -10px;
+    }
+
+    .doing .doingtitle {
+        letter-spacing: 4px;
+        margin-top: 20px;
+    }
+
+    /* .doing .text-wrapper-3 {
+        margin-left: 60px;
+    } */
+    .doing .overlap-wrapper {
+        margin-left: -10%;
+    }
+
+    .doing .overlap-group-wrapper {
+        margin-top: 30px;
+        margin-left: 10%;
+
+    }
+
+    .doing .doingtext1 {
+        margin-left: 12%;
+        margin-bottom: 20px;
+    }
+
+    .doing .doingtext2 {
+        margin-left: 50%;
+    }
+
+    .doing .text-wrapper-3 {
+        letter-spacing: 2px;
+        margin-top: -570px;
+        margin-bottom: 30px;
+    }
+
+    .doing .text-wrapper-6 {
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    .doing .text-wrapper-4 {
+        letter-spacing:1.8px;
+        line-height: 1.2;
+        font-size: 1.4rem;
+    }
+    
+    .doing .text-wrapper-5 {
+        letter-spacing:1.8px;
+        line-height: 1.2;
+        font-size: 1.4rem;
+
+    }
+    /* .doing .pic {
+        left: 20px;
+    } */
+
+    .doing .arrow-down-gif {
+        margin-top: -420px;
+        transform: scale(0.13);
+    }
+
+    .doing .knowledge {
+        margin-left: 650px;
+    }
+
+    .doing .pic {
+        margin-top: -380px;
+    }
+
+    .doing .mask-group {
+        margin-left: -5%;
+    }
+
+    .aboutus {
+        margin-top: 30px;
+        transform: scale(0.7);
+    }
+
+    .aboutus .overlap {
+        margin-top: 30px;
+
+    }
+
+    .aboutus .text-wrapper {
+        letter-spacing: 4px;
+        margin-top: 10px;
+        font-size: 3em;
+    }
+
+    .aboutus .ims {
+        transform: scale(1);
+    }
+
+    .aboutus .aimto {
+        letter-spacing: 1px;
+        font-size: 1.5em;
+    }
+
+    .aboutus .helpskin {
+        margin-top: 30px;
+        font-size: 1em;
+    }
+
+    .aboutus .overlap-2 {
+        font-size: 0.8em;
+    }
+
+    .aboutus .arrow-down-gif {
+        transform: scale(0.45) rotate(180deg);
+    }
+
+    /* .doingtext1 {
+        margin: 0 0 0 0px;
+    }
+
+    .doingtext2 {
+        margin: 0 0 0 -155px;
+    } */
+    .mission .missiontext {
+        line-height: 1.2;
+        max-width: 60%;
+    }
+
+    .mission .missionbutton {
+        max-width: 20%;
+    }
+
+    .aboutus {
+        margin-bottom: 0px;
+        /* 調整底部外邊距以消除空白 */
+        padding-bottom: 50px;
+        /* 根據需要調整內邊距來保留一些空間，但避免過多的空白 */
+    }
+}
+
+@media screen and (min-width: 1401px)and (max-width:1680px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+
+    }
+
+    .mission,
+    .doing,
+    .aboutus {
+        text-align: center;
+        padding: 0px;
+        margin: auto;
+        /* 確保元素水平居中 */
+        width: 100%;
+        /* 設定寬度為100% */
+        box-sizing: border-box;
+        /* 包括邊框和內邊距在內的寬度 */
+        height: 100vh;
+    }
+
+    /* mission */
+    .mission {
+        margin-top: 5%;
+    }
+
+    .mission-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin: 180px 0 0 0;
+        /* 確保容器填滿父元素 */
+    }
+
+    .missiontext {
+        max-width: 60%;
+        height: auto;
+        text-align: center;
+        /* Center the text */
+        margin: 20px;
+        /* 提供一些間隔 */
+        letter-spacing: 4px;
+    }
+
+    .mission .mission-title {
+        font-size: 6rem;
+        font-weight: 800;
+        margin: 50px auto;
+        letter-spacing: 4px;
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 20px;
+        letter-spacing: 8px;
+    }
+
+    .mission .mission-content {
+        font-size: 1.6rem;
+        letter-spacing: 1.5px;
+        width: 100%;
+    }
+
+    .mission-title,
+    .mission-content {
+        margin: 0 10px;
+        /* 在標題和內容之間提供間距 */
+    }
+
+    .mission .missionbutton {
+        font-size: 1.2rem;
+        margin-top: 50px;
+        width: 12%;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        transform: scale(1.4);
+        /* order: 2; */
+    }
+
+    .missionbutton:hover {
+        background-color: #4e4735;
+        /* Color for the button on hover */
+    }
+
+    .mission .arrow-down-gif {
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+        margin-top: -10px;
+        /* 或者增加 margin-top 的負值 */
+        transform: scale(0.18);
+        /* 等比例縮小6倍 */
+    }
+
+    /* doing */
+    /* .doingtext1 {
+        margin: 0 0 0 345px;
+    } */
+
+    /* .doingtext2 {
+        margin: 0 0 0 275px;
+    } */
+
+    .doing {
+        height: 100vh;
+        transform: scale(1);
+        padding: 100px 0;
+        margin-bottom: 30px;
+    }
+
+    .doing .arrow-down-gif {
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+        margin-top: -420px;
+        transform: scale(0.15);
+        /* 等比例縮小6倍 */
+    }
+
+    .doing .doingtitle {
+        font-weight: 800;
+        font-size: 2.5rem;
+        letter-spacing: 5px;
+    }
+
+    .doing .overlap-2 {
+        align-self: flex-start;
+        /* Align this element to the left */
+        margin-left: -15%;
+        margin-top: -30px;
+        transform: scale(0.7);
+    }
+
+    .doing .overlap-3 {
+        align-self: flex-end;
+        /* Align this element to the right */
+        margin-left: 15%;
+        margin-top: -120px;
+        transform: scale(0.7);
+    }
+
+    .doing .overlap-group-wrapper {
+        margin-top: -80px;
+    }
+
+    .doingtext1,
+    .doingtext2 {
+        width: 80%;
+        /* This sets the width to be the same for both elements */
+        text-align: center;
+    }
+
+    .doing .text-wrapper-3 {
+        width: 540px;
+        height: 48px;
+        font-weight: 800;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-top: -575px;
+        margin-left: 30%;
+    }
+
+    .doing .text-wrapper-4 {
+        width: 500px;
+        height: 160px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 31px;
+        margin-left: 31%;
+        margin-top: 23px;
+    }
+
+    .doing .rectangle {
+        margin-top: 50px;
+        width: 50%;
+    }
+
+    .doing .knowledge {
+        /* 使用 transform 来移动图片，不会影响到其他元素的布局 */
+        margin-left: 800px;
+        /* 水平移动，根据需要调整 */
+        transition: transform 0.3s ease;
+        /* 添加平滑过渡效果 */
+        transform: translateY(-340px);
+    }
+
+    .doing .rectangle-2 {
+        margin-top: 50px;
+        width: 60%;
+        transform: scale(1.2);
+    }
+
+    .doing .pic {
+        margin-left: -700px;
+        margin-top: -330px;
+        object-fit: cover;
+    }
+
+    .doing .doingtext2 {
+        margin-top: 10px;
+    }
+
+    .doing .text-wrapper-6 {
+        width: 500px;
+        height: 72px;
+        font-weight: 900;
+        color: #000000;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-top: -200px;
+        margin-left: 62%;
+    }
+
+    .doing .text-wrapper-5 {
+        width: 500px;
+        height: 71px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 31px;
+        letter-spacing: 0;
+        margin-left: 62%;
+    }
+
+    .doing .mask-group {
+        position: relative;
+        z-index: 3;
+        transform: translateY(-300px) scale(0.6);
+        margin-right: 4%;
+    }
+
+    /* about us */
+    .aboutus {
+        height: 100vh;
+        margin-top: 30px;
+    }
+
+    .aboutus .overlap {
+        height: 100vh;
+    }
+
+    .aboutus .overlap-2 {
+        display: flex;
+        /* 启用 flex 布局 */
+        flex-direction: column;
+        /* 默认为列排列，但可以根据需要调整 */
+        align-items: center;
+        /* 水平居中对齐子元素 */
+        justify-content: center;
+        /* 垂直居中 */
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+    }
+
+    /* .doingtext1 {
+        margin: 0 0 0 345px;
+    } */
+
+    /* .doingtext2 {
+        margin: 0 0 0 275px;
+    } */
+
+    .aboutus {
+        text-align: center;
+        padding-top: 70px;
+        /* 根據需要保留或調整此值 */
+        padding-bottom: 70px;
+        /* 新增底部內邊距 */
+        /* transform: scale(0.8); */
+    }
+
+    .aboutus .view {
+        margin-top: 50px;
+    }
+
+    .aboutus .imgs {
+        width: 100%;
+    }
+
+    .aboutus .text-wrapper {
+        font-weight: 700;
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 5px;
+        line-height: normal;
+    }
+
+    .aboutus .image-scroll-container {
+        margin: -5%;
+        transform: scale(0.65);
+    }
+
+    .aboutus .aimto {
+        font-family: "Inter", Helvetica;
+        font-weight: 500;
+        color: #4A3F3F;
+        font-size: 1.3rem;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        margin: 0;
+    }
+
+    .aboutus .helpskin {
+        font-family: "Inter", Helvetica;
+        background-color: #7B6F52;
+        /* Change this to your desired button color */
+        color: white;
+        /* Change this to your desired text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50px;
+        /* Adjust this value to change the roundness of the corners */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin-top: 30px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        order: 2;
+        margin-bottom: 10px;
+    }
+
+    .helpskin:hover {
+        background-color: #4e4735;
+        /* Color for the button on hover */
+    }
+
+    .aboutus .text-wrapper-2 {
+        font-weight: 500;
+        font-size: 4rem;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-top: -170px;
+        margin-bottom: 20px;
+    }
+
+    .aboutus .arrow-down-gif {
+        margin-top: 10px;
+        transform: scale(0.45) rotate(180deg);
+
+    }
+}
+
+@media screen and (min-width: 1601px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+
+    }
+
+    .mission,
+    .doing,
+    .aboutus {
+        text-align: center;
+        padding: 0px;
+        margin: auto;
+        /* 確保元素水平居中 */
+        width: 100%;
+        /* 設定寬度為100% */
+        box-sizing: border-box;
+        /* 包括邊框和內邊距在內的寬度 */
+        height: 100vh;
+    }
+
+    /* mission */
+    .mission {
+        margin-top: 0%;
+    }
+
+    .mission-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin: 180px 0 0 0;
+        /* 確保容器填滿父元素 */
+    }
+
+    .missiontext {
+        max-width: 60%;
+        height: auto;
+        text-align: center;
+        /* Center the text */
+        margin: 20px;
+        /* 提供一些間隔 */
+    }
+
+    .mission .mission-container {
+        margin-top: 270px;
+    }
+
+    .mission .mission-title {
+        font-size: 6rem;
+        font-weight: 800;
+        margin: 50px auto;
+        letter-spacing: 8px;
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 20px;
+
+    }
+
+    .mission .mission-content {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        width: 100%;
+    }
+
+    .mission-title,
+    .mission-content {
+        margin: 0 10px;
+        /* 在標題和內容之間提供間距 */
+    }
+
+    .mission .missionbutton {
+        font-size: 1.2rem;
+        margin-top: 50px;
+        width: 12%;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        transform: scale(1.4);
+        /* order: 2; */
+    }
+
+    .missionbutton:hover {
+        background-color: #4e4735;
+        /* Color for the button on hover */
+    }
+
+    .mission .arrow-down-gif {
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+        margin-top: 80px;
+        /* 或者增加 margin-top 的負值 */
+        transform: scale(0.18);
+        /* 等比例縮小6倍 */
+    }
+
+    /* doing */
+    /* .doingtext1 {
+        margin: 0 0 0 345px;
+    } */
+
+    /* .doingtext2 {
+        margin: 0 0 0 275px;
+    } */
+
+    .doing {
+        height: 100vh;
+        transform: scale(1);
+        padding: 100px 0;
+        margin-bottom: 30px;
+    }
+
+    .doing .arrow-down-gif {
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+        margin-top: -350px;
+        transform: scale(0.15);
+        /* 等比例縮小6倍 */
+    }
+
+    .doing .doingtitle {
+        font-weight: 800;
+        font-size: 3rem;
+        letter-spacing: 5px;
+    }
+
+    .doing .overlap-2 {
+        align-self: flex-start;
+        /* Align this element to the left */
+        margin-left: -15%;
+        margin-top: -30px;
+        transform: scale(0.7);
+    }
+
+    .doing .overlap-3 {
+        align-self: flex-end;
+        /* Align this element to the right */
+        margin-left: 15%;
+        margin-top: -80px;
+        transform: scale(0.7);
+    }
+
+    .doing .overlap-group-wrapper {
+        margin-top: -80px;
+    }
+
+    .doingtext1,
+    .doingtext2 {
+        width: 80%;
+        /* This sets the width to be the same for both elements */
+        text-align: center;
+    }
+
+    .doing .text-wrapper-3 {
+        width: 540px;
+        height: 48px;
+        font-weight: 800;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        margin-top: -600px;
+        margin-left: 30%;
+    }
+
+    .doing .text-wrapper-4 {
+        width: 500px;
+        height: 160px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 31px;
+        margin-left: 31%;
+        margin-top: 23px;
+    }
+
+    .doing .rectangle {
+        margin-top: 50px;
+        width: 50%;
+    }
+
+    .doing .knowledge {
+        /* 使用 transform 来移动图片，不会影响到其他元素的布局 */
+        margin-left: 800px;
+        /* 水平移动，根据需要调整 */
+        transition: transform 0.3s ease;
+        /* 添加平滑过渡效果 */
+        transform: translateY(-340px) scale(1.2);
+    }
+
+    .doing .rectangle-2 {
+        margin-top: 50px;
+        width: 60%;
+        transform: scale(1.2);
+    }
+
+    .doing .pic {
+        margin-left: -700px;
+        margin-top: -360px;
+        transform: scale(1.2);
+        object-fit: cover;
+    }
+
+    .doing .doingtext2 {
+        margin-top: 10px;
+    }
+
+    .doing .text-wrapper-6 {
+        width: 500px;
+        height: 72px;
+        font-weight: 900;
+        color: #000000;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        margin-top: -200px;
+        margin-left: 62%;
+    }
+
+    .doing .text-wrapper-5 {
+        width: 500px;
+        height: 71px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 31px;
+        letter-spacing: 0;
+        margin-left: 62%;
+    }
+
+    .doing .mask-group {
+        position: relative;
+        z-index: 3;
+        transform: translateY(-300px) scale(0.6);
+        margin-right: 4%;
+    }
+
+    /* about us */
+    .aboutus {
+        height: 100vh;
+        margin-top: 30px;
+        transform: scale(1);
+    }
+
+    .aboutus .overlap {
+        height: 100vh;
+    }
+
+    .aboutus .overlap-2 {
+        display: flex;
+        /* 启用 flex 布局 */
+        flex-direction: column;
+        /* 默认为列排列，但可以根据需要调整 */
+        align-items: center;
+        /* 水平居中对齐子元素 */
+        justify-content: center;
+        /* 垂直居中 */
+        cursor: pointer;
+        /* 提示用戶可點擊 */
+    }
+
+    /* .doingtext1 {
+        margin: 0 0 0 345px;
+    } */
+
+    /* .doingtext2 {
+        margin: 0 0 0 275px;
+    } */
+
+    .aboutus {
+        text-align: center;
+        padding-top: 70px;
+        /* 根據需要保留或調整此值 */
+        padding-bottom: 70px;
+        /* 新增底部內邊距 */
+        /* transform: scale(0.8); */
+    }
+
+    .aboutus .view {
+        margin-top: 50px;
+    }
+
+    .aboutus .imgs {
+        width: 100%;
+    }
+
+    .aboutus .text-wrapper {
+        font-weight: 700;
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 8px;
+        line-height: normal;
+    }
+
+    .aboutus .image-scroll-container {
+        margin: -5%;
+        transform: scale(0.6);
+    }
+
+    .aboutus .aimto {
+        font-family: "Inter", Helvetica;
+        font-weight: 500;
+        color: #4A3F3F;
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: normal;
+        margin: 0;
+    }
+
+    .aboutus .helpskin {
+        font-family: "Inter", Helvetica;
+        background-color: #7B6F52;
+        /* Change this to your desired button color */
+        color: white;
+        /* Change this to your desired text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50px;
+        /* Adjust this value to change the roundness of the corners */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin-top: 30px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        order: 2;
+        margin-bottom: 10px;
+    }
+
+    .helpskin:hover {
+        background-color: #4e4735;
+        /* Color for the button on hover */
+    }
+
+    .aboutus .text-wrapper-2 {
+        font-weight: 500;
+        font-size: 4rem;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-top: -170px;
+        margin-bottom: 20px;
+    }
+
+    .aboutus .arrow-down-gif {
+        margin-top: 10px;
+        transform: scale(0.45) rotate(180deg);
+
+    }
+}
+
+
+/* 淡入淡出效果 */
+.fade-out {
+    animation: fadeOut 1s ease-out 0s 1 normal forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+body.fade-in {
+    animation: fadeIn 1s ease-in 0s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 飛入動畫 */
+@keyframes flyInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes flyInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fly-in-left {
+    animation: flyInFromLeft 1s forwards;
+}
+
+.fly-in-right {
+    animation: flyInFromRight 1s forwards;
+}

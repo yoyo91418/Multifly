@@ -1,0 +1,511 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", Helvetica, sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('img/exbg.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/exbg.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.25;
+    z-index: -1;
+} */
+
+.overlap,
+.text-wrapper-6,
+.space,
+.down,
+.alltech,
+.info,
+.out,
+.map2,
+.usbtn button {
+    margin-bottom: 10px;
+}
+
+.q {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Helvetica, sans-serif;
+    transform: scale(0.8);
+}
+
+.q .overlap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* Ensure that absolute positioning is relative to this container */
+}
+
+.q .text-wrapper-6 {
+    /* position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); */
+    align-items: center;
+    text-align: center;
+    color: #96957c;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.q .space {
+    height: auto;
+    width: auto;
+    transform: scale(0.8);
+    margin-top: 0;
+    border-radius: 15px;
+}
+
+.q .down {
+    width: 50%;
+    /* 各佔一半寬度 */
+    display: flex;
+    /* 確保使用 flexbox，方便內部再次排列 */
+    flex-direction: column;
+    /* 子元素垂直排列 */
+    align-items: flex-start;
+    /* 左側對齊 */
+    padding: 10px;
+    /* 添加一些內間距 */
+}
+
+.q .info {
+    width: 50%;
+    /* 各佔一半寬度 */
+    display: flex;
+    /* 確保使用 flexbox，方便內部再次排列 */
+    flex-direction: row;
+    /* 子元素垂直排列 */
+    align-items: flex-start;
+    /* 左側對齊 */
+    padding: 10px;
+    /* 添加一些內間距 */
+}
+
+.q .icon {
+    vertical-align: middle;
+    /* margin-right: 5px; */
+    /* Adjust size as needed */
+    width: 30px;
+    /* Icon width */
+    height: 30px;
+    /* Icon height */
+    flex-shrink: 0;
+    /* Prevent the icon from shrinking */
+}
+
+/* 
+.q .icon,
+.q .text-wrapper-10,
+.q .text-wrapper-9 {
+    margin-right: 10px;
+} */
+.q .info .tpidate {
+    display: flex;
+    /* This will align the children (tpi and date) side by side */
+    justify-content: space-between;
+    /* This spreads the children evenly across the parent's width */
+    align-items: center;
+    /* This aligns the children vertically in the center */
+    width: 100%;
+    /* Ensures the container takes full width */
+    flex-direction: column;
+}
+
+.q .info .tpi,
+.q .info .date {
+    flex: 1;
+    /* This gives each child equal flexibility to expand */
+    display: flex;
+    /* Enables flex layout for the contents of tpi and date */
+    justify-content: flex-start;
+    /* Aligns the contents to the start of each div */
+}
+
+.q .info .out {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+
+}
+
+.q .info .map2 {
+    /* Add space below the maps */
+    width: 100%;
+    /* 調整地圖大小 */
+    height: 100%;
+}
+
+.q .info img,
+.q .info .vector-2 {
+    /* If these are supposed to be next to the text, remove them from here
+    and let them stay inline with the text content as they are inline elements. */
+    margin-bottom: 50px;
+    /* Add space below the images */
+}
+
+
+.q .info .text-wrapper-12,
+.q .info .text-wrapper-10,
+.q .info .text-wrapper-9 {
+    text-align: left;
+    /* Align the text to the left */
+    width: 100%;
+    /* Take full width to enforce the alignment */
+}
+
+.q .down .alltech {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* Align to the left */
+}
+
+/* Typography adjustments */
+.q .text-wrapper-12,
+.q .text-wrapper {
+    font-size: 46px;
+    font-weight: 600;
+    color: #000000;
+    margin: 5px 10px;
+}
+
+.q .text-wrapper-10 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #367364;
+    margin: 5px 10px;
+}
+
+.q .text-wrapper-11 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #757575;
+    margin: 30px 10px;
+}
+
+.q .text-wrapper-9 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #757575;
+    margin: 5px 10px;
+}
+
+.q .usbtn button {
+    text-align: center;
+    font-family: "Inter", Helvetica;
+    /* 使用你想要的字体 */
+    font-size: 28px;
+    /* 字体大小 */
+    font-weight: 500;
+    color: white;
+    /* 字体颜色 */
+    padding: 10px 50px;
+    /* 内填充 */
+    border: none;
+    /* 无边框 */
+    border-radius: 40px;
+    /* 圆角边框 */
+    background: #000000;
+    /* 渐变背景色 */
+    cursor: pointer;
+    /* 鼠标悬停时的光标 */
+    outline: none;
+    /* 点击时的轮廓 */
+    transition: box-shadow 0.3s ease-in-out;
+    /* 过渡效果 */
+    letter-spacing: 8px;
+    display: block;
+    /* 確保按鈕為區塊級元素居中 */
+    margin: 0 auto 50px;
+    /* 增加底部間距並水平居中 */
+    /* Adjust or remove margin as needed, depending on your design */
+}
+
+.q .usbtn button:hover,
+.q .usbtn button:active {
+    color: black;
+    /* 文字颜色变为黑色 */
+    background: #5a5a5a;
+    /* 反白背景颜色 */
+}
+
+/* computer */
+@media screen and (min-width: 1681px) {
+
+    .background-image {
+        background-size: cover;
+        /* 保持背景圖片覆蓋整個可視區域 */
+    }
+}
+
+/*  laptop */
+@media screen and (min-width: 1201px) and (max-width: 1680px) {
+
+    .q .text-wrapper-6 {
+        font-size: 52px;
+        margin-top: 40px;
+    }
+
+    .q .space {
+        margin-top: -150px;
+        transform: scale(0.6);
+    }
+
+    .q .down .text-wrapper-11 {
+        letter-spacing: 3px;
+        margin: 50px 20px;
+    }
+
+    .q .info,
+    .q .down {
+        margin-top: -150px;
+
+    }
+
+    .q .info {
+        display: flex;
+        /* Ensuring info is a flex container */
+        flex-direction: column;
+        /* Organizing contents vertically */
+    }
+
+    .q .info>div:first-child {
+        flex-direction: row;
+        /* Organizing children horizontally */
+    }
+
+    .q .info .out,
+    .q .info .tpidate {
+        flex: 1;
+        /* Allow out and tpidate to each take half of the available space */
+        display: flex;
+        /* Apply flexbox for these elements too */
+        flex-direction: row;
+        /* Vertical organization inside out and tpidate */
+        justify-content: center;
+        /* Vertically center the contents */
+    }
+
+    .q .info .map2 {
+        order: 2;
+        /* Ensuring map2 appears after out and tpidate */
+        width: 100%;
+        /* Full width for the map */
+        height: 100%;
+        /* Adjusting map height */
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .q .space {
+        align-items: center;
+        /* 確保所有項目向左對齊 */
+        width: 140%;
+        text-align: left;
+        /* 文字也向左對齊 */
+        padding-left: 0;
+        /* 確保左邊沒有內距 */
+    }
+
+    .q .down .text-wrapper-11 {
+        letter-spacing: 3px;
+        margin: 50px 20px;
+    }
+
+    .q .info {
+        display: flex;
+        /* Ensuring info is a flex container */
+        flex-direction: column;
+        /* Organizing contents vertically */
+    }
+
+    .q .info>div:first-child {
+        flex-direction: row;
+        /* Organizing children horizontally */
+    }
+
+    .q .info .tpidate {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        /* Align children vertically */
+    }
+
+    .q .info .out,
+    .q .info .tpidate {
+        justify-content: flex-start;
+        /* Align children to the left */
+        align-items: flex-start;
+        /* Start alignment vertically */
+    }
+
+    .q .info .tpi,
+    .q .info .date {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        /* Ensure horizontal layout */
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* Align contents to the left */
+        width: 100%;
+        /* Full width to utilize the space */
+    }
+
+    .q .info .map2 {
+        order: 2;
+        /* Ensuring map2 appears after out and tpidate */
+        width: 100%;
+        /* Full width for the map */
+        height: 100%;
+        /* Adjusting map height */
+    }
+}
+
+/* phone */
+@media (max-width: 767px) {
+
+    .q {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* 從居中改為起始對齊 */
+        align-items: flex-start;
+        /* 確保所有內容向左對齊 */
+        height: auto;
+        padding-left: 0;
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+
+
+    .q .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 確保子元素向左對齊 */
+        width: 100%;
+        /* 確保占滿容器寬度 */
+    }
+
+    .q .info .tpidate,
+    .q .info .tpi,
+    .q .info .date {
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        /* 添加適當的間距 */
+    }
+
+    .q .overlap,
+    .q .info,
+    .q .down,
+    .q .text-wrapper-6,
+    .q .space,
+    .q .info .text-wrapper-12,
+    .q .info .text-wrapper-10,
+    .q .info .text-wrapper-9 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* 確保所有項目向左對齊 */
+        width: 100%;
+        text-align: left;
+        /* 文字也向左對齊 */
+        padding-left: 0;
+        /* 確保左邊沒有內距 */
+    }
+
+    .q .usbtn button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 確保所有項目向左對齊 */
+        width: 100%;
+        text-align: center;
+        /* 文字也向左對齊 */
+        padding-left: 0;
+        /* 確保左邊沒有內距 */
+    }
+
+    .q .text-wrapper-6 {
+        font-size: 50px;
+        /* 調整更小屏幕的字體大小 */
+    }
+
+    .q .space {
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+        margin: 30px 0;
+    }
+
+    .q .info .text-wrapper-12,
+    .q .down .text-wrapper {
+        font-size: 40px;
+        /* 調整字體大小以適應小屏幕 */
+    }
+
+    .q .info .map2 {
+        width: 100%;
+        /* 地圖寬度為100% */
+        height: auto;
+    }
+
+    .q .usbtn button {
+        padding: 10px 20px;
+        margin: 20px 0;
+        /* 增加間隔 */
+    }
+}
+
+/* 淡出效果 */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* 淡入效果 */
+.fade-in {
+    animation: fadeInEffect 1s forwards;
+}
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

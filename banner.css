@@ -1,0 +1,323 @@
+/* body::before {
+    content: '';
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100vh;
+    background-color: rgb(254, 238, 238);
+    z-index: 9999;
+} */
+
+/* Banner CSS */
+.all .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 2000;
+    padding: 10px;
+}
+
+.all .banner.scrolling-banner {
+    background-color: rgba(255, 255, 255, 0.591);
+    /* 輕微透明的白色背景 */
+    /* box-shadow: 0 4px 4px rgba(101, 101, 101, 0.5); */
+    /* 保持陰影效果 */
+    transition: background-color 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
+    /* 平滑過渡效果 */
+    /* backdrop-filter: blur(10px); */
+    /* 添加背景模糊效果 */
+}
+
+.all .overlap-7 {
+    position: relative;
+    height: 100%;
+    /* 確保子元素填滿父元素高度 */
+    margin: 0;
+    width: 100%;
+}
+
+.all .LOGO-ref {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* 檢查這個高度是否適合固定的 banner 高度 */
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    /* 垂直居中 */
+    object-fit: cover;
+    margin: 0;
+}
+
+.all .multifly img {
+    position: absolute;
+    max-width: 250px;
+    height: auto;
+    top: 45%;
+    left: 3%;
+    transform: translateY(-50%) scale(0.8);
+    /* 垂直居中 */
+    object-fit: contain;
+    margin: 0;
+}
+
+
+.all .about-us {
+    position: relative;
+    width: 83px;
+    height: 18px;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+    font-weight: 500;
+    color: #7B6F52;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px;
+
+}
+
+.all .collaboration {
+    position: relative;
+    width: 83px;
+    height: 18px;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+    font-weight: 500;
+    color: #7B6F52;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px;
+
+}
+
+.all .merch {
+    position: relative;
+    width: 83px;
+    height: 18px;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+    font-weight: 500;
+    color: #7B6F52;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: block;
+    /* Hidden by default */
+    transform: translateX(100%);
+    /* start offscreen */
+    transition: transform 0.5s ease-in-out;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    /* Background color */
+    background-image: url('img/bannerbg.png');
+    /* Set the background image */
+    background-size: cover;
+    /* Cover the entire area of the menu */
+    background-position: center;
+    /* Center the background image */
+    width: 55%;
+    /* Width of the sidebar */
+    height: 100vh;
+    /* Full screen height */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    padding-top: 60px;
+    /* Top padding to avoid overlap with the banner */
+    gap: 50px;
+    overflow: hidden;
+}
+
+/* Mobile menu link styles */
+.mobile-menu a {
+    display: block;
+    padding: 30px 16px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    z-index: 1100;
+}
+
+.mobile-menu-icon {
+    display: block;
+    position: fixed;
+    right: calc(5%);
+    cursor: pointer;
+    /* margin: 0; */
+    z-index: 1110;
+
+}
+
+.mobile-menu .about-us,
+.mobile-menu .collaboration,
+.mobile-menu .merch {
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+/* Hover and active shadow effect for links */
+/* Permanent shadow effect for links */
+.all .about-us,
+.all .collaboration,
+.all .merch {
+    /* Permanent shadow */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); Permanent shadow */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for the transform on hover */
+}
+
+.all .about-us:hover,
+.all .collaboration:hover,
+.all .merch:hover {
+    transform: translateY(-10px);
+    /* Slight lift effect on hover */
+}
+
+.all .about-us:active,
+.all .collaboration:active,
+.all .merch:active {
+    transform: translateY(10px);
+    /* Slightly push down when clicked */
+}
+
+.menu-item-expanded {
+    font-size: 40px;
+    /* 或根据需求设置其他大小 */
+}
+
+/* 遮罩顯示時 banner轉換成白色 */
+.banner-active {
+    color: white;
+    /* 设置所有文本颜色为白色 */
+}
+
+.banner-active a,
+.banner-active .LOGO-ref,
+.banner-active .multifly img,
+.banner-active .mobile-menu-icon {
+    color: white;
+    /* 更改链接文本颜色 */
+    filter: brightness(0) invert(1);
+    /* 为图片反色，使之变为白色 */
+}
+
+.banner-active .multifly img {
+    top: -100%;
+}
+
+.banneroverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 黑色背景，80%透明度 */
+    z-index: 1090;
+    /* 確保低於 mobile-menu 的 1100 */
+    display: none;
+    /* 預設不顯示 */
+}
+
+.non-clickable {
+    pointer-events: none;
+    /* Add this class to elements that should not be clickable */
+}
+
+
+@media (max-width: 600px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        right: calc(5%);
+        top: 48%;
+        transform: translateY(-50%) scale(0.8);
+        cursor: pointer;
+        z-index: 1110;
+    }
+
+    .all .multifly img {
+        position: absolute;
+        max-width: 200px;
+        height: auto;
+        top: 45%;
+        left: 51.5%;
+        transform: translate(-50%, -50%) scale(0.8);
+        /* 垂直居中 */
+        object-fit: contain;
+        margin: 0;
+    }
+}
+
+/* Mobile menu icon and mobile menu responsiveness */
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    .mobile-menu-icon {
+        display: none;
+    }
+
+    .all .LOGO-ref {
+
+        width: 55px;
+        height: 55px;
+    }
+
+    .all .about-us,
+    .all .collaboration,
+    .all .merch {
+        font-size: 20px;
+        /* 放大字體 */
+        margin: 10px;
+        /* 保持原有間距 */
+        position: relative;
+        width: 83px;
+        height: 18px;
+        font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+        font-weight: 500;
+        color: #7B6F52;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+
+}
+
+@media (min-width: 1201px) {
+    .mobile-menu-icon {
+        display: none;
+    }
+
+    .banner-active .multifly img {
+        top: -110%;
+        /* position: fixed;
+        right: 10%; */
+        /*
+        right: 10%; */
+    }
+}

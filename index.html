@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+  <title>MULTiFLY</title>
+  <link rel="stylesheet" href="multiflynew.css">
+  <link rel="stylesheet" href="banner.css" />
+  <link href="https://fonts.googleapis.com/css?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Italiana&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+
+<body class="fade-in"><!-- 新增!!!有修改body -->
+  <!-- Banner -->
+  <div class="all">
+    <div class="banner">
+      <div class="overlap-7">
+        <img class="LOGO-ref" src="img/logo_brown.png" />
+        <a href="#home" class="multifly" id="link-home">
+          <img src="img/logo-goldd.png" alt="Multifly">
+        </a>
+        <img src="img/menu.png" class="mobile-menu-icon" alt="Menu" />
+      </div>
+      <!-- Desktop Menu Items -->
+      <div class="desktop-menu">
+        <a href="us.html" class="about-us">關於我們</a>
+        <a href="collaboration.html" class="collaboration">合作對象</a>
+        <a href="https://www.instagram.com/multiflyskin/?hl=zh-tw" class="merch">周邊商品</a>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <a href="us.html" class="about-us">關於我們</a>
+        <a href="collaboration.html" class="collaboration">合作對象</a>
+        <a href="https://www.instagram.com/multiflyskin/?hl=zh-tw" class="merch">周邊商品</a>
+      </div>
+    </div>
+    <div class="banneroverlay"></div>
+  </div>
+
+  <!-- 首頁 -->
+  <div class="content" id="content-area">
+    <img class="pre" src="https://c.animaapp.com/LdiQR2DE/img/pre-comp1-15.gif" />
+    <img class="pre-comp" src="https://c.animaapp.com/LdiQR2DE/img/pre-comp1-15.gif" />
+    <img class="pre-2" src="https://c.animaapp.com/LdiQR2DE/img/pre-comp1-15.gif" />
+    <div class="box1">
+      <div class="text-wrapper-4">
+        <img src="img/contentlogo.png" alt="MULTiFLY" class="content-logo">
+      </div>
+      <div class="flexcontainer">
+        <p class="text">
+        <p> </p>
+        <span class="text-wrapper-5">在我們的展覽中，您可以創造專屬於自己的蝴蝶，藉此希望每個人都能從不同的角度看待皮膚症狀，為每個人帶來全新的價值觀。
+        </span>
+        </p>
+      </div>
+    </div>
+    <button class="explore-button" id="explore-button">探索 ⭢</button>
+  </div>
+
+
+  <!-- 大蝴蝶 -->
+  <div class="new-content" id="new-content">
+    <div id="canvas">
+      <div class="bridge">
+        <div class="overlap">
+          <!-- 搜尋欄 -->
+          <div class="input-wrapper">
+            <input type="text" class="input" placeholder="輸入蝴蝶名稱" id="typing1">
+            <button id="submitButton">搜尋</button>
+          </div>
+          <!-- 分類列框框 -->
+          <div class="rectangle">
+            <!-- 按鈕排列容器 -->
+            <div class="BUTTONcontainer" id="buttonContainer">
+              <button id="ALL">ALL</button>
+              <button id="category1">雀斑</button>
+              <button id="category2">老人斑</button>
+              <button id="category3">汗斑</button>
+              <button id="category4">痣</button>
+              <button id="category5">異位性濕疹</button>
+              <button id="category6">肝斑</button>
+              <button id="category7">白斑</button>
+              <button id="category8">其他</button>
+            </div>
+          </div>
+          <div class="intro-textbox" style="display: none;">
+            <h2>症狀介紹</h2>
+            <hr>
+            <div class="freckle-text" style="display: none;">
+              <p>雀斑因長期受紫外線傷害，令表皮層的黑色素細胞過份活躍而變大，使黑色素的份量增加形成斑點</p>
+            </div>
+            <div class="age-text" style="display: none;">
+              <p>主要是由於皮膚曝露在紫外線下，導致黑色素沉積的結果。
+                老人斑通常是與年齡相關的皮膚變化，而非真正的老年疾病。</p>
+            </div>
+            <div class="sweat-text" style="display: none;">
+              <p>汗斑是皮屑芽孢菌大量生長導致皮膚發炎，產生白色色塊</p>
+            </div>
+            <div class="mole-text" style="display: none;">
+              <p>痣會因為遺傳、陽光曝曬、賀爾蒙變化、年齡等原因而產生。</p>
+            </div>
+            <div class="atopic-text" style="display: none;">
+              <p>可能因內部免疫失調導致發炎，或是皮膚角質層防禦功能失常,
+                多數病人都是在嬰幼兒時期發生,僅少部分病人持續至成人期</p>
+            </div>
+            <div class="mel-text" style="display: none;">
+              <p>肝斑並不是由於肝臟問題引起的，而是與日曬和皮膚老化有關</p>
+            </div>
+            <div class="vi-text" style="display: none;">
+              <p>白斑是一種黑色素細胞退化死亡的現象，有可能因為黑色素細胞在製造色素過程，產生毒性物質，而自我摧毀。
+                或是先天基因缺陷，使黑色素細胞易受傷害</p>
+            </div>
+            <div class="other-text" style="display: none;">
+              <p>可以看看留言區有沒有夥伴分享自己的症狀成因給大家認識</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="image-container"></div> -->
+      </div>
+    </div>
+
+    <div id="canvasHolder"></div>
+    <!--頁面中下方按鈕-->
+    <!-- <button class="butguide" id="butguide">⭢</button> -->
+  </div><!-- 显示处理后的图片 -->
+
+  <div id="overlay" style="display: none;">
+    <div class="modal-content">
+      <img src="img/click.png" alt="Click icon" style="width: 50px;"> <!-- Adjust the path as necessary -->
+      <p>點擊不同的蝴蝶可以看到展覽<br>體驗者的名稱與留言</p>
+      <button id="confirm-button">確認</button>
+    </div>
+  </div>
+
+  <!-- 遮罩 -->
+  <!-- <div id="overlay"
+    style="display: none; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0, 0, 0, 0.5); z-index: 1000; color: white; text-align: center; padding-top: 15%; font-size: 20px;">
+    <p>
+      測驗系統暫不開放 可點擊上方選項查看更多<br /> 敬請期待！
+    </p>
+    <img id="lock" src="img/lock.png">
+  </div> -->
+
+  </div>
+  <div id="myModal" class="modal"></div>
+
+
+  <!-- 模态框或工具提示 -->
+  <div id="tooltip" class="tooltip" style="position: absolute;display:none;">
+    <p id="tooltipContent"></p>
+  </div>
+
+
+  <script>
+    // 後端
+
+    document.getElementById('explore-button').addEventListener('click', function () {
+      var submitBtn = document.getElementById('submitButton');
+      if (submitBtn) {
+        submitBtn.addEventListener('click', function () {
+          var inputValue = document.getElementById('typing1').value;
+          socket.emit('search', { inputValue: inputValue });
+          console.log("搜索內容：", inputValue);
+        });
+      }
+
+      // 监听从服务器返回的 no_butterfly_found 事件
+      socket.on('no_butterfly', function (data) {
+        // 显示消息提示没有找到蝴蝶
+        alert(data.message);  // 或者可以更新页面上的某个元素来显示这个消息
+      });
+
+      // canvasholder高度
+
+    });
+  </script>
+
+  <script>
+    //前端
+    document.addEventListener('DOMContentLoaded', function (event) {
+
+      // var overlay = document.getElementById('overlay');
+      var banner = document.querySelector('.all'); // 更正選擇器
+
+      // 如果點擊遮罩本身，也應當隱藏遮罩並恢復 banner 原始狀態
+      // overlay.addEventListener('click', function () {
+      //   overlay.style.display = 'none';
+      //   banner.classList.remove('banner-active');
+      // });
+
+      // 防止事件在遮罩內部元素之間傳播
+      var modalContent = document.querySelector('.modal-content');
+      if (modalContent) {
+        modalContent.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      }
+
+      // document.getElementById('butguide').addEventListener('click', function () {
+      //   // var overlay = document.getElementById('overlay');
+      //   var allContent = document.querySelector('body');
+      //   var canvasholder = document.getElementById('canvasHolder');
+      //   var banner = document.querySelector('.all');
+      //   var tooltip = document.querySelector('tooltip');
+
+      //   if (overlay.style.display === 'block') {
+      //     overlay.style.display = 'none';
+      //     banner.classList.remove('banner-active');
+      //     allContent.classList.add('non-clickable'); // 添加 non-clickable 类使内容不可点击
+      //     document.getElementById('canvasHolder').style.pointerEvents = 'auto'; // 确保 canvasHolder 可点击
+
+      //   } else {
+      //     overlay.style.display = 'block';
+      //     banner.classList.add('banner-active');
+      //     allContent.classList.remove('non-clickable');
+      //     document.getElementById('canvasHolder').style.pointerEvents = 'none'; // 禁止 canvasHolder 点击
+      //   }
+      // });
+
+
+      /* 新增!!! */
+      // 检查是否有查询参数，例如 ?click-explore
+      if (window.location.search === '?click-explore') {
+        exploreButton.click(); // 模拟点击
+      }
+
+      // Category button click event handlers
+      var categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6', 'category7', 'category8'];
+      var textClasses = ['freckle-text', 'age-text', 'sweat-text', 'mole-text', 'atopic-text', 'mel-text', 'vi-text', 'other-text'];
+
+      categories.forEach(function (category, index) {
+        var button = document.getElementById(category);
+        if (button) {
+          button.addEventListener('click', function () {
+            showTextContent(textClasses[index]);
+          });
+        }
+      });
+      // Handling the "ALL" button to hide the intro-textbox
+      var allButton = document.getElementById('ALL');
+      if (allButton) {
+        allButton.addEventListener('click', function () {
+          hideIntroTextbox();
+        });
+      }
+
+
+    });
+
+    // function adjustCanvasHolderPosition() {
+    //   var introTextbox = document.querySelector('.intro-textbox');
+    //   var butGuide = document.querySelector('.butguide');
+    //   var canvasHolder = document.getElementById('canvasHolder');
+
+    //   if (introTextbox && butGuide && canvasHolder) {
+    //     var introBottom = introTextbox.getBoundingClientRect().bottom;
+    //     var guideTop = butGuide.getBoundingClientRect().top;
+
+    //     var spaceBetween = guideTop - introBottom; // 计算两元素之间的距离
+    //     var canvasTop = introBottom + spaceBetween / 2 - canvasHolder.offsetHeight / 2; // 计算canvasHolder的顶部位置
+
+    //     // 设置 canvasHolder 的顶部位置
+    //     canvasHolder.style.top = `${canvasTop}px`;
+    //   }
+    // }
+
+    // // 调用函数来初次设置位置
+    // adjustCanvasHolderPosition();
+
+    // // 当窗口尺寸变化时，更新位置
+    // window.addEventListener('resize', adjustCanvasHolderPosition);
+
+    function showTextContent(className) {
+      // 隐藏所有文本内容
+      hideAllTextContents();
+      // 显示 intro-textbox
+      var introTextbox = document.querySelector('.intro-textbox');
+      if (introTextbox) {
+        introTextbox.style.display = 'block';
+      }
+      // 根据提供的类名显示特定的文本内容
+      var contentToShow = document.querySelector('.' + className);
+      if (contentToShow) {
+        contentToShow.style.display = 'block';
+      }
+    }
+
+    function hideIntroTextbox() {
+      var introTextbox = document.querySelector('.intro-textbox');
+      if (introTextbox) {
+        introTextbox.style.display = 'none'; // Hide the intro-textbox
+      }
+    }
+
+    function showTextContent(className) {
+      // Hide all text contents
+      hideAllTextContents();
+      // Show intro-textbox
+      var introTextbox = document.querySelector('.intro-textbox');
+      if (introTextbox) {
+        introTextbox.style.display = 'block';
+      }
+      // Show specific text content based on provided class name
+      var contentToShow = document.querySelector('.' + className);
+      if (contentToShow) {
+        contentToShow.style.display = 'block';
+      }
+    }
+
+    function hideIntroTextbox() {
+      var introTextbox = document.querySelector('.intro-textbox');
+      if (introTextbox) {
+        introTextbox.style.display = 'none'; // Hide the intro-textbox
+      }
+    }
+
+    function hideAllTextContents() {
+      // Hide all specific text contents
+      var allTextContents = document.querySelectorAll('.intro-textbox > div');
+      allTextContents.forEach(function (content) {
+        content.style.display = 'none';
+      });
+    }
+
+    let modal = document.getElementById('myModal');
+
+
+    // 获取 <span> 元素，用于关闭模态窗口
+    let span = document.getElementsByClassName('close')[0];
+
+
+    // 当用户点击 <span> (x), 关闭模态窗口
+    // span.onclick = function () {
+    //   modal.style.display = "none";
+    // }
+
+
+    // 当用户点击模态窗口以外的地方时，也关闭模态窗口
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  </script>
+
+  <script>
+    document.getElementById("canvas").style.display = "none";
+    document.getElementById("canvasHolder").style.display = "none";
+
+    document.getElementById("explore-button").addEventListener("click", function () {
+      document.getElementById("canvas").style.display = "block";
+      document.getElementById("canvasHolder").style.display = "block";
+    });
+  </script>
+
+  <script>
+    document.getElementById('myModal').addEventListener('click', function (event) {
+      // style.display = "none" 会隐藏模态框
+      document.getElementById('myModal').style.display = 'none';
+    });
+
+    document.getElementById('explore-button').addEventListener('click', function () {
+      // 移除myModal上的事件监听器
+      document.getElementById('myModal').removeEventListener('click', function (event) {
+        event.preventDefault();
+      });
+    });
+  </script>
+
+  <script src="sketch.js"></script>
+  <script src="page-transition.js"></script><!-- 新增!!! -->
+  <script src="multifly.js"></script>
+  <script src="banner.js"></script>
+</body>
+
+
+</html>

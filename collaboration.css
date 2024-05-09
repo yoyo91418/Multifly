@@ -1,0 +1,189 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('img/cobg.png');
+    background-size: cover;
+    background-position: top center;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 基础定位样式 */
+.skinlogo,
+.span,
+.span2,
+.skinbtn {
+    position: absolute;
+    top: 200%;
+    left: 20%;
+    /* 所有元素从左边20%的位置开始 */
+    height: auto;
+    margin: 0 auto;
+    transform-origin: left top;
+    /* 确保缩放时左对齐 */
+}
+
+/* 个别元素定位 */
+.skinlogo {
+    top: 20%;
+    transform: scale(0.8);
+}
+
+.span {
+    font-family: "Inter", Helvetica;
+    font-weight: bold;
+    /* 设置文字为粗体 */
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 2px;
+    white-space: normal;
+    top: 50%;
+    left: 20%;
+    /* 文本元素保持20%左边距 */
+}
+
+.span2 {
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    /* 设置行间距为1.5倍字体大小 */
+    white-space: normal;
+    top: 60%;
+    left: 20%;
+    /* 文本元素保持20%左边距 */
+}
+
+.skinbtn {
+    top: 83%;
+    transform: scale(0.8);
+    /* 或者增加 margin-top 的負值 */
+    font-family: "Inter", Helvetica;
+    background-color: #7B6F52;
+    /* Change this to your desired button color */
+    color: white;
+    /* Change this to your desired text color */
+    padding: 14px 22px;
+    border: none;
+    border-radius: 50px;
+    /* Adjust this value to change the roundness of the corners */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+}
+
+.skinbtn:hover {
+    background-color: #4e4735;
+    /* Color for the button on hover */
+}
+
+/* 不同屏幕尺寸的调整 */
+@media (max-width: 1100px) {
+
+    body {
+        background-image: url('img/aboutus3.png');
+    }
+
+    .skinlogo,
+    .span,
+    .span2,
+    .skinbtn {
+        left: 7%;
+        /* 中等屏幕上的调整 */
+    }
+
+    .span {
+        font-size: 22px;
+        line-height: 1.4;
+        max-width: 90%;
+    }
+
+    .span2 {
+        font-size: 16px;
+        line-height: 1.4;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width:920px) and (min-width:601px) {
+    .skinlogo {
+        transform: scale(0.9);
+        /* 居中且缩放 */
+    }
+
+    .span {
+        font-size: 38px;
+    }
+    .span2{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url('img/aboutus3.png');
+    }
+
+    .skinlogo {
+        transform: translateX(0%) scale(0.6);
+        /* 居中且缩放 */
+    }
+
+    .skinbtn {
+        top: 80%;
+        transform: translateX(0%) scale(1);
+        /* 居中且缩放 */
+    }
+
+    .span,
+    .span2 {
+        transform: translateX(0%);
+        /* 居中对齐 */
+        max-width: 90%;
+        /* 限制最大宽度，避免超出屏幕 */
+    }
+
+    .skinlogo {
+        top: 20%
+    }
+
+    .span {
+        font-size: 20px;
+        top: 40%
+    }
+
+    .span2 {
+        letter-spacing: 1px;
+        font-size: 18px;
+        top: 50%
+    }
+}
+
+/* 淡出效果 */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* 淡入效果 */
+.fade-in {
+    animation: fadeInEffect 1s forwards;
+}
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
