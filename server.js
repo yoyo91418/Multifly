@@ -77,7 +77,7 @@ function startServer() {
         emitCompletedRecords(socket);
 
 
- 
+
 
         socket.on('search', (inputValue) => {
 
@@ -85,11 +85,11 @@ function startServer() {
             // 假设你有一个数组或者方法来查找匹配的蝴蝶
             // for loop to check for butterfly
             console.log(inputValue);
-            });
-            socket.on('no_butterfly_found', function (data) {
+        });
+        socket.on('no_butterfly_found', function (data) {
             socket.emit('no_butterfly', { message: '輸入錯誤!' });
-            });
-            
+        });
+
 
 
 

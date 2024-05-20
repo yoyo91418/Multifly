@@ -160,7 +160,6 @@
 
   <script>
     // 後端
-
     document.getElementById('explore-button').addEventListener('click', function () {
       var submitBtn = document.getElementById('submitButton');
       if (submitBtn) {
@@ -183,6 +182,41 @@
   </script>
 
   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 函數來改變背景圖片
+      function changeIntroBackground(imageUrl) {
+        var introTextbox = document.querySelector('.intro-textbox');
+        introTextbox.style.backgroundImage = `linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0.1)), url('${imageUrl}')`;
+      }
+
+      // 為每個類別按鈕添加事件監聽器
+      document.getElementById('category1').addEventListener('click', function () {
+        changeIntroBackground('img/intro_freckle.png');
+      });
+      document.getElementById('category2').addEventListener('click', function () {
+        changeIntroBackground('img/intro_age.png');
+      });
+      document.getElementById('category3').addEventListener('click', function () {
+        changeIntroBackground('img/intro_sweat.png');
+      });
+      document.getElementById('category4').addEventListener('click', function () {
+        changeIntroBackground('img/intro_mole.png');
+      });
+      document.getElementById('category5').addEventListener('click', function () {
+        changeIntroBackground('img/intro_atopic.png');
+      });
+      document.getElementById('category6').addEventListener('click', function () {
+        changeIntroBackground('img/intro_melasma.png');
+      });
+      document.getElementById('category7').addEventListener('click', function () {
+        changeIntroBackground('img/intro_vitiligo.png');
+      });
+      document.getElementById('category8').addEventListener('click', function () {
+        changeIntroBackground('');
+      });
+    });
+
+
     //前端
     document.addEventListener('DOMContentLoaded', function (event) {
 

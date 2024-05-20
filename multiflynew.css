@@ -321,21 +321,22 @@ button {
   z-index: 2000;
   /* Lower z-index to keep it behind other content */
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: none;
   /* Semi-transparent white border */
-  border-radius: 10px;
+  border-radius: 12px;
   /* Rounded corners */
   padding: 2px 32px;
   /* Padding inside the box */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
-  /* Vertical translucent white gradient background */
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%); */
   backdrop-filter: blur(10px);
   /* Blur effect for the background */
+  background-size: cover;
+  background-position: center;
   max-width: 800px;
   /* Maximum width of the text box */
   margin: 10px auto;
   /* Center the box with margin */
-  color: #000000;
+  color: #ffffff;
   /* Text color */
   font-family: 'Inter', sans-serif;
   /* Font style */
@@ -344,13 +345,13 @@ button {
 }
 
 .intro-textbox h2 {
-  margin: 0 0 10px 0;
+  margin: 10px 0 0 0;
   /* Space below the title */
   padding-left: 15px;
   /* Space before the title text */
-  border-left: 5px solid #404345;
+  border-left: 5px solid #ffffff;
   /* Blue vertical line before title */
-  color: #404345;
+  color: #ffffff;
   /* Blue text color for the title */
   font-size: 18px;
   /* Title font size */
@@ -358,15 +359,19 @@ button {
   /* Aligns the title to the left */
 }
 
-.gradient-textbox hr {
-  border: 0;
+hr {
+  border: none;
   height: 1px;
-  background-color: #404345;
+  background-color: #ffffffa0;
   /* Blue line color */
   margin-top: 10px;
   /* Space above the line */
   margin-bottom: 10px;
   /* Space below the line */
+  box-shadow: none;
+  /* 移除陰影 */
+  outline: none;
+  /* 移除外框線 */
 }
 
 .intro-textbox p {
@@ -376,6 +381,10 @@ button {
   /* Line height for paragraph text */
   font-size: 14px;
   /* Paragraph font size */
+  color: #ffffff;
+  align-self: start;
+  text-align: start;
+  margin-bottom: 5px;
 }
 
 
@@ -868,16 +877,6 @@ a {
     font-size: 1.2rem;
   }
 
-
-  /* .bridge .rectangle {
-    position: absolute;
-    height: 160px;
-    width: 100vw;
-    left: 100px;
-    z-index: 100;
-
-  } */
-
   .pre,
   .pre-2,
   .pre-comp {
@@ -988,18 +987,9 @@ a {
 
   }
 
-  /* .intro-textbox {
-    position: fixed;
-    width: 100%;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    text-align: center;
-    z-index: 100;
-  } */
   .intro-textbox {
-    margin-top: 25%;
-    width: 80%;
+    margin-top: 95px;
+    width: 350px;
     z-index: 100;
   }
 
